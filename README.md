@@ -78,44 +78,37 @@ Here are few more arguments that you can pass in the above command to simulate d
 
    ```
     java -jar buggyApp.jar PROBLEM_MEMORY
-
    ```
 3. If you would like the **CPU consumption** to go up to 80 – 90% then run the buggyApp.jar with following arguments:
 
    ```
     java -jar buggyApp.jar PROBLEM_CPU
-
    ```
 4. If you would like the application to keep slowly **spawning** new threads, then run the buggyApp.jar with following arguments:
 
    ```
    java -jar buggyApp.jar PROBLEM_THREADLEAK
-
    ```
    
 5. If you would like the application to experience **Deadlock**, then run the buggyApp.jar with following arguments:
 
    ```
     java -jar buggyApp.jar PROBLEM_DEADLOCK
-
    ```
 6. If you would like the application to experience **java.lang.StackOverflowError**, then run the buggyApp.jar with following arguments:
 
    ```
     java -jar buggyApp.jar PROBLEM_STACKOVERFLOW
-
    ```
 7. If you would like to put multiple threads in **BLOCKED** state, then run the buggyApp.jar with following arguments:
 
    ```
     java -jar buggyApp.jar PROBLEM_BLOCKED
-
    ```
 8. If you would like to simulate heavy **I/O activity**, then run the buggyApp.jar with following arguments:
 
    ```
     java -jar buggyApp.jar PROBLEM_IO
-
    ```
 
 > *Note: When you run buggyApp.jar with this argument, application will create 5 unique files by name: fileIO-1.txt, fileIO-2.txt, fileIO-3.txt, fileIO-4.txt, fileIO-5.txt. Then 20 lines of contents will be written in to this file and read back again and again infinietly. It will cause heavy **I/O activity** on the host.*
