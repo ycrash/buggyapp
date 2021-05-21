@@ -11,7 +11,6 @@
 ```
 SSH: git clone git@github.com:ycrash/buggyapp.git
 HTTP: git clone https://github.com/ycrash/buggyapp.git
-
 ```
 
 ## How to build buggyApp locally?
@@ -26,7 +25,6 @@ Go to the directory where you have cloned buggyapp. Let's say you have cloned th
 
 ```
 cd  /opt/workspace/buggyapp
-
 ```
 
 Run the below commands to clean the old build and generate new build
@@ -35,7 +33,6 @@ Run the below commands to clean the old build and generate new build
 ant clean
 
 ant dist-ee
-
 ```
 
 After executing ```ant dist-ee``` command, you will see ```dist``` directory in buggyapp project. The built code will be present inside ```dist/enterpise``` directory in zip format. The zip file contains JAR as well as WAR files.
