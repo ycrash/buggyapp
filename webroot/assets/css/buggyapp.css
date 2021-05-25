@@ -1,0 +1,428 @@
+
+
+/* --------------------------------------------------------------------------------------------------
+												Margin
+-----------------------------------------------------------------------------------------------------*/
+.m-b-15 {margin-bottom:15px;}
+.m-b-30 { margin-bottom: 30px; }
+.m-t-15 {margin-top:15px;}
+
+/* -----------------------------------------------------------------------------------------------------
+												Padding
+--------------------------------------------------------------------------------------------------------*/
+.p-t-150 { padding-top: 150px; }
+.p-t-100 { padding-top: 100px; }
+/* -------------------------------------------------------------------------------------------------------- 
+												Font Size
+-----------------------------------------------------------------------------------------------------------*/
+.font-18 { font-size: 18px; }
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------
+												Font weight
+-----------------------------------------------------------------------------------------------------------*/
+.font-w-400 { font-weight: 400; }
+.font-w-500 { font-weight: 500; }
+.font-w-600 { font-weight: 600; }
+.font-w-700 { font-weight: 700; }
+.font-w-800 { font-weight: 800; }
+.font-w-900 { font-weight: 900; }
+.font-w-bold { font-weight: bold; }
+.font-w-normal { font-weight: normal; }
+
+
+/* ------------------------------------------------------------------------------------------------------- 
+												Font Color
+----------------------------------------------------------------------------------------------------------*/
+.txt-white { color: #fff; }
+.txt-black { color: #000; }
+
+/* -----------------------------------------------------------------------------------------------------
+												Text align
+--------------------------------------------------------------------------------------------------------*/
+
+.txt-center	{
+	text-align:center;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+										Other CSS properties
+-------------------------------------------------------------------------------------------------------*/
+.display-none{
+	display:none;
+}
+
+.display-block {
+	display:block;	
+}
+
+.display-unset {
+	display: unset;
+}
+
+.w-150 {
+    width: 150px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.btn-submit {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    background-color: #BD142D;
+    color: #FFF;
+    border-color: rgba(0,0,0,0.01);
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #BD142D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-submit:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.buggyapp-background {
+	box-shadow: 0 2px 4px 0 rgb(0 0 0 / 3%), 0 0 4px 0 rgb(0 0 0 / 3%), 0 2px 11px 0 rgb(98 98 98 / 17%);
+    margin: 0px auto auto;
+    width: 65%;
+    margin-bottom: 85px;
+    padding: 60px 54px 44px 30px;
+    background-color: #FEEFEE;
+}
+
+.buggy-btn-submit {
+	
+	display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: #d9e7cc;
+    color: #000;
+    border-color: rgba(0,0,0,0.01);
+    width: 100%;
+    padding: 22px;
+    border: 2px solid #d9e7cc;
+}
+.buggy-btn-submit:hover {
+    color: #000;
+}
+
+.buggy-btn-submit::focus {
+    color: #fff;
+}
+.buggy-btn-effect {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 21px;
+    /* box-shadow: 0 0 14px 5px rgb(0 0 0 / 15%); */
+    cursor: pointer;
+    outline: none;
+}
+
+#buggyapp-header {
+	width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(191 191 191 / 50%) 0px 4px 6px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.navbar-inverse {
+    background-color:#fff;
+    border-color: #fff;
+    box-shadow: rgb(191 191 191 / 50%) 0px 4px 6px 0px;
+}
+.menu-font {
+    font-size: 16px !important;
+}
+
+.width-192 {
+	width: 192px;
+}
+
+.menu-right {
+    float: right;
+}
+.menu-color {
+	color:#000 !important;
+	font-weight: bold;
+}
+
+
+.menu-color:hover {
+	color: #bd142d !important;
+}
+
+.color-merron {
+	color: #bd142d;
+}
+
+#buggyapp-footer {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    z-index: 9;
+    margin-top: auto;
+    height: 63px;
+    box-shadow: rgb(191 191 191 / 50%) 0px -4px 6px 0px;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container-padding {
+    padding: 20px 103px 20px;
+    width: 100%;
+}
+.jc-between {
+    justify-content: space-between;
+}
+
+.color-green {
+    color: rgb(114, 192, 44);
+}
+/* ----------------------------------------------------------------------------------------------------
+										Modal CSS
+-------------------------------------------------------------------------------------------------------*/
+.modal-w {
+	width: 420px;
+}
+
+.m .modal-content {
+	border-radius: 1px;
+	border: none;
+}
+.m .modal-header {
+    position: relative;
+	justify-content: center;
+    /* background: #f2f2f2; */
+    border-bottom: 0 none;
+}
+.m .modal-body {
+    padding: 0px 30px 30px 30px;
+}
+.m .modal-footer {
+    /* background: #f2f2f2; */
+    border-top: 0 none;
+    padding: 0px 30px 0px 30px;
+}
+.m h4 {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+}
+.m label {
+    font-weight: normal;
+    font-size: 13px;
+}
+.m .form-control, .modal-login .btn {
+	min-height: 38px;
+	border-radius: 2px; 
+}
+.m .hint-text {
+	text-align: center;
+}
+.m .close {
+    position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.m .checkbox-inline {
+    margin-top: 12px;
+}
+.m input[type="checkbox"]{
+    margin-top: 2px;
+}
+.m .hint-text a {
+	color: #999;
+}
+
+.modal-backgrounddrop { background: rgba(0, 0, 0, 0.85); }
+
+/* Start: Make modal vertically center */
+.modal {
+	text-align: center;
+	padding: 0 !important;
+}
+
+.modal:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+}
+
+.close:hover {
+	outline:none;
+}
+
+.line-font {
+    font-size: 48px;
+}
+
+.margin-45 {
+	margin: 45px 0 0;
+}
+
+.buggy-problems {
+	padding: 0 0 30px;
+    background: #fff;
+    box-shadow: 0 0 12px 0 rgb(191 191 191 / 50%);
+    border-radius: 10px;
+}
+
+
+#buggyapp-page {
+    max-width: 1920px;
+    padding: 72px 0;
+}
+
+#buggyapp-page #buggyapp-content {
+    padding: 0 55px 0 185px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-other #buggyapp-page #buggyapp-content .box {
+    display: block !important;
+}
+
+#buggyapp-page #buggyapp-content .box {
+    margin: 45px 0 0;
+    padding: 0 0 30px;
+    background: #fff;
+    box-shadow: 0 0 12px 0 rgba(191, 191, 191, 0.5);
+    border-radius: 10px;
+    display: flex;
+    background-color: #FEEFEE;
+}
+
+#buggyapp-page #buggyapp-content .box h2 {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: bold;
+}
+.page-other #buggyapp-page #buggyapp-content .box .tools-box img {
+    max-width: 100%;
+   /*  padding: 59px 68.5px 0px 71.5px; */
+    position: relative;
+}
+
+.page-other #buggyapp-page .flex-c .tools-box-content .box-content {
+    padding: 20px 0px;
+    line-height: 1.5;
+    color: #676767;
+   	font-size: 15px;
+   	font-weight: 600;
+}
+
+.page-other #buggyapp-page .flex-c .start-btn {
+    text-align: center;
+  /*  margin: 29px 0 0 0; */
+}
+
+.page-other #buggyapp-page #e-book-content .box .tools-box {
+    height: auto;
+    display: flex;
+    border-radius: 10px 10px 0px 0px;
+}
+.page-other #buggyapp-page #e-book-content .box .tools-box a {
+    max-width: 99%;
+}
+#buggyapp-page #buggyapp-content h1 {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: bold;
+    margin: 50px 0 0;
+}
+.page-other #buggyapp-page .flex-c {
+    margin: 45px 0 0;
+}
+
+.page-other #buggyapp-page .flex-c .start-btn .buugyapp-btn {
+	border-radius: 30px;
+    padding: 12px 33px 12px;
+    background: #bd142d;
+    color:#fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.column-grid {
+	column-gap: 34px;
+}
+
+.margin-6 {
+    margin: 6px 0px 0px !important;
+}
+.flex-c {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1936px) and (min-width: 1050px){
+#buggyapp-page #buggyapp-content .box.box-33-d {
+    width: 22.45%;
+}
+}
+
+.page-other #buggyapp-page #buggyapp-content .box .tools-box {
+    height: auto;
+    display: flex;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 90px;
+}
+
+.margin-30 {
+    margin: 30px 0px 10px !important;
+}
+
+.buggyapp-tool-content {
+    padding: 25px 24.5px 18px 27px;
+}
+
+.padding-150 {
+    padding: 0 150px 0 150px !important;
+}
+
+.heart {
+    width: 14px;
+    height: 12px;
+    background-image: url(../../assets/images/icon-heart.svg);
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+
+@media (max-width: 767px){
+.mob-padding-0 {
+    padding: 0 !important;
+}
+}
+
+@media (max-width: 1284px) and (min-width: 1071px){
+#buggyapp-page #buggyapp-content .box.box-33-d {
+    width: 21.45%;
+}
+}

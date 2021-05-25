@@ -1,0 +1,267 @@
+/*=====================================
+=       43. Preview Page Css          =
+======================================*/
+
+.hero__purchase, .downlode-btn {
+    & .btn {
+        &:hover {
+            background: $theme-color--default;
+            color: #fff;
+        }
+    }
+}
+.header__actions--preview {
+    & .ht-btn {
+        background: #fff;
+        color: $theme-color--default;
+    }
+    @media #{$desktop-device,$tablet-device,$large-mobile}{
+        flex-basis: 70%;
+        .header__actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+.preview-hero-area {
+    height: 1020px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    @media #{$laptop-device}{
+        height: 860px;
+    }
+    @media #{$laptop-device}{
+        height: 780px;
+    }
+    @media #{$desktop-device}{
+        height: 620px;
+    }
+    @media #{$tablet-device}{
+        height: auto;
+    }
+    @media #{$large-mobile}{
+        height: auto;
+    }
+}
+.preview-hero-bg {
+    background: url(../images/hero/mitech-landing-main-slider-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.pr-img-01 {
+    position: absolute;
+    top: -4%;
+    left: 28%;
+    @media #{$large-mobile}{
+        width: 130px;
+        top: -10%;
+        left: 8%;
+    }
+}
+.pr-img-02 {
+    position: absolute;
+    top: 12%;
+    right: 6%;
+    @media #{$large-mobile}{
+        right: -5%;
+    }
+}
+.pr-img-03 {
+    position: absolute;
+    bottom: 10%;
+    right: -10%;
+    @media #{$laptop-device}{
+        width: 250px;
+        right: -10%;
+        
+    }
+    @media #{$desktop-device}{
+        width: 250px;
+        right: -10%;
+        
+    }
+    @media #{$tablet-device}{
+        width: 200px;
+        right: -20%;
+        
+    }
+    @media #{$large-mobile}{
+        width: 200px;
+        right: -20%;
+    }
+    @media #{$small-mobile}{
+        width: 200px;
+        right: -30%;
+    }
+}
+.pr-img-04 {
+    position: absolute;
+    bottom: 20%;
+    right: 18%;
+    @media #{$tablet-device}{
+        bottom: 5%;
+        right: 18%;
+        
+    }
+    @media #{$large-mobile}{
+        bottom: 2%;
+        right: 50%;
+    }
+}
+
+.preview-inner-img {
+    & img {
+        z-index: 4;
+    }
+    @media #{$tablet-device}{
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+.preview-hero-text {
+    z-index: 4;
+    & h6 {
+        color: $theme-color--two;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    
+    @media #{$tablet-device}{
+        text-align: center;
+        .hero-button {
+            justify-content: center;
+        }
+    }
+    @media #{$large-mobile}{
+        text-align: center;
+    }
+    
+}
+.single-preview-item__wrap {
+    & a {
+        display: block;
+        &:hover {
+            transform: translateY(-5px);
+           & .single-preview-item__thumbnail {
+                .overlay {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                
+            } 
+        }
+    }
+}
+
+.frame-screen {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 70px 40px -35px rgba(51,51,51,.13);
+    & .dots {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 14px;
+        height: 23px;
+        & .dot {
+            margin: 0 4px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #dadada;
+        }
+    }
+    
+    & .single-preview-item__thumbnail {
+        position: relative;
+        .overlay {
+            background-color: rgba(8,106,216,0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            visibility: visible;
+            opacity: 0;
+            transition: $transition--default;
+        }
+        .btn-view-demo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            background: #fff !important;
+            pointer-events: none;
+            min-width: 150px;
+        }
+    }
+    .single-preview-item__info {
+        & h6 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.87;
+            padding: 14px 27px;
+            margin-bottom: 0;
+            text-align: left
+        }
+    }
+    
+}
+
+.layout-section-bg {
+    background: url(../images/preview/mitech-landing-header-preview-bg.png);
+    background-color: #f6f2ed;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    
+}
+.layouts-section-text {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.ht-box-icon.preview-style {
+    margin-left: auto;
+    max-width: 420px;
+    margin-top: 30px;
+    transition: $transition--default;
+    &:hover {
+        transform: translateY(-5px);
+    }
+    .icon-box-wrap {
+        display: flex;
+        .image {
+            position: relative;
+            flex-shrink: 0;
+            margin: 0 27px 0 0;
+            width: 114px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    }
+}
+
+.prv-section-footer-bg {
+    background: url(../images/preview/mitech-landing-footer-bg-01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer-preview-content h6 {
+    letter-spacing: 7px;
+}

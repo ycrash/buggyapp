@@ -1,0 +1,83 @@
+/*=============================================
+=          25. Restaurant Menu Css            =
+=============================================*/
+.restaurant-menu {
+    &--inner {
+        margin-right: 0;
+        margin-left: 0;
+        padding-top: 85px;
+        padding-right: 53px;
+        padding-bottom: 63px;
+        padding-left: 53px ;
+        box-shadow: -1px 0 68px rgba(187,187,187,0.4);
+        background-color: #fff;
+        & .menu-list {
+            padding: 0 26px 0 0;
+        }
+        & .menu-header {
+            position: relative;
+            margin-bottom: 12px;
+            &::after {
+                position: absolute;
+                right: 0;
+                bottom: 7px;
+                left: 0;
+                display: block;
+                border-top: 1px solid #eee;
+                content: "";
+            }
+            
+            & .menu-title {
+                position: relative;
+                z-index: 1;
+                display: inline;
+                background: #fff;
+                font-size: 16px;
+                padding-right: 10px;
+            }
+        }
+        &  .menu-price {
+            position: relative;
+            z-index: 1;
+            float: right;
+            background-color: #fff;
+            color: #1f1f1f;
+            font-size: 16px;
+        }
+        & .menu-text {
+            background: none;
+            font-style: italic;
+            font-size: 15px;
+        }
+        & li + li {
+            margin-top: 38px;
+        }
+        & .menu-badge {
+            &.new {
+                position: absolute;
+                top: -26px;
+                right: -35px;
+                width: 40px;
+                height: 20px;
+                background: #de4630;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 9px;
+                line-height: 20px;
+                z-index: 2;
+                &::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: -1px;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 8px solid #de4630;
+                transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

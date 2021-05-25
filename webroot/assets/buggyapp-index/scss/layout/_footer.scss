@@ -1,0 +1,66 @@
+
+/*=========================================
+=               06. Footer Css            =
+===========================================*/
+.reveal-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    @media #{ $tablet-device, $large-mobile}{
+        position: static;
+    }
+}
+
+.footer-widget-wrapper{
+    margin-bottom: -35px;
+}
+.footer-widget{
+    margin-bottom: 30px;
+    &__title{
+        margin-top: -3px;
+        color: $theme-color--black;
+    }
+
+    &__list{
+        li{
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            & .image_btn {
+                border-radius: 5px;
+                box-shadow: 0 0 20px rgba(51,51,51,.1);
+                overflow: hidden;
+            }
+        }
+    }
+}
+.social-group__list {
+    & .ht-social-networks.tilte-style  {
+        .link-text {
+            color: #CCCCCC;
+            &::before {
+                background: rgba(255,255,255,0.2);
+            }
+            &:hover {
+                color: $white;
+            }
+        }
+        & .social-link {
+            &::before {
+                color: #ccc;
+            }
+        }
+    }
+}
+.copyright-text{
+    display: inline-block;
+    @media #{$large-mobile}{
+        margin-bottom: 15px;
+    }
+}
+
+/*=====  End of footer ======*/

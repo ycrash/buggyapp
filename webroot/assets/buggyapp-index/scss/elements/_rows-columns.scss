@@ -1,0 +1,184 @@
+/*=============================================
+=        25. Row Separators Css            =
+=============================================*/
+.row-separators-wrap {
+    position: relative; 
+}
+.separators-space {
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+.row-separators-images {
+    background-image: url(../images/bg/home-resolutions-hero-bg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+.row-separators-bg {
+    background: #69afed;
+}
+
+
+.vc_row-separator.bottom {
+    bottom: 0;
+}
+.vc_row-separator svg {
+    height: 100px;
+    width: 100%;
+}
+.vc_row-separator {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    line-height: 0;
+}
+.row-separators-style {
+    .vc_row-separator svg {
+        fill: #fff;
+    }
+}
+
+.square-style {
+    .vc_row-separator.square.bottom {
+        transform: translate(-50%, 50%);
+    }
+    .vc_row-separator.square {
+        width: auto;
+        left: 50%;
+    }
+    .vc_row-separator svg {
+        height: 90px;
+    }
+    .vc_row-separator svg {
+        fill: #f7be68;
+    }
+}
+
+.big-triangle-style {
+    .big_triangle.bottom {
+        transform: scaleY(-1);
+    }
+    .vc_row-separator svg {
+        fill: #fff;
+    }
+}
+
+.tilt-right-style {
+    .tilt_right.bottom {
+        transform: scale(-1, 1);
+    }
+    .vc_row-separator svg {
+        fill: #69afed;
+    }
+}
+
+.tilt-left-style {
+    .vc_row-separator.top {
+        top: 0;
+    }
+    .vc_row-separator.tilt_left.top {
+        transform: scale(1, -1);
+    }
+    .vc_row-separator svg {
+        height: 100px;
+    }
+    & .vc_row-separator svg {
+        fill: #69afed;
+    }
+}
+
+.wavify-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.wavify-wrapper svg {
+    height: 380px;
+}
+
+.triangle-bottom {
+    .vc_row-separator.triangle.bottom {
+        transform: scaleY(-1);
+    }
+    .vc_row-separator.triangle.bottom {
+        transform: scaleY(-1);
+    }
+    .vc_row-separator svg {
+        fill: #fff;
+    }
+    .vc_row-separator svg {
+        height: 40px;
+    }
+}
+
+.curve-style {
+    .vc_row-separator.bottom {
+        bottom: 0;
+    }
+    .vc_row-separator svg {
+        fill: #fff;
+    }
+     .vc_row-separator svg {
+        height: 50px;
+    }
+}
+
+.waves-style {
+    .vc_row-separator.bottom {
+        bottom: 0;
+    }
+    .vc_row-separator svg {
+        height: 30px;
+    }
+    .vc_row-separator svg {
+        fill: #69afed;
+    }
+}
+
+.circle-style {
+    .vc_row-separator.top {
+        top: 0;
+    }
+    .vc_row-separator svg {
+        height: 50px;
+    }
+    .vc_row-separator svg {
+        fill: #69afed;
+    }
+}
+
+.default-bg-2 {
+    background: #69AFED;
+}
+.particles-area {
+    position: relative;
+}
+.constellation-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.vc_row-separator.bottom {
+    bottom: 0;
+}
+
+.triangle-one-style,.triangle-two--style {
+    .vc_row-separator svg {
+        fill: #69afed;
+    }
+    .vc_row-separator svg {
+        height: 200px;
+    }
+}
+.triangle-two--style {
+    .vc_row-separator.tilt_right.top {
+        transform: scale(-1, -1);
+    }
+}
+

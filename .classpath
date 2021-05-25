@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-8.5.46/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/log4j-api-2.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/log4j-core-2.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/spring-mock.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/testng-6.8.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="D:/Git_repo/buggy-app/webroot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="output" path="dist"/>
+</classpath>

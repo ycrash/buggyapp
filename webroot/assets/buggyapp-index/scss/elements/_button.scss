@@ -1,0 +1,324 @@
+/*=============================================
+=            08. Button Css           =
+=============================================*/
+.ht-btn {
+    font-size: 15px;
+    font-weight: 500;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 0 36px;
+    text-align: center;
+    color: $white;
+    background: $theme-color--default;
+    border-width: 1px;
+    transform: translateY(0px);
+    &:hover, &:active, &:focus{
+        color: $white;
+        background-image: $theme-color--default;
+        transform: translateY(-3px);
+    }
+    
+    &.ht-btn-xs {
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+        padding: 0 20px;
+    }
+    &.ht-btn-sm {
+        padding: 0 30px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+    }
+    &.ht-btn-md {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0em;
+        line-height: 54px;
+        height: 54px;
+    }
+    &.ht-btn-lg {
+        padding: 0 40px;
+        height: 64px;
+        line-height: 64px;
+        font-size: 16px;
+    }
+    &.ht-btn-custom {
+        min-width: 280px;
+    }
+    &.ht-btn-full {
+        width: auto;
+        display: block;
+    }
+    &--outline{
+        border-width: 1px;
+        line-height: 54px;
+        background: transparent;
+        border-color: $theme-color--default;
+        color: $theme-color--default;
+
+        &:hover, &:focus, &:active{
+            transform: translateY(-3px);
+            border-color: transparent;
+            background: $theme-color--default;
+            color: $white;
+        }
+    }
+    &--solid{
+        border-width: 1px;
+        line-height: 54px;
+        background: transparent;
+        border-color: #ddd;
+        color: $theme-color--default;
+
+        &:hover, &:focus, &:active{
+            transform: translateY(-3px);
+            border-color: transparent;
+            background: $theme-color--default;
+            color: $white;
+        }
+    }
+    &--circle{
+        border-radius: 30px;
+    }
+    &--no-round{
+        border-radius: 0px;
+    }
+    &.ht-btn-default {
+        padding: 0 30px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        width: 180px;
+    }
+    & .btn-icon {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 0;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+}
+
+
+.btn {
+    font-size: 15px;
+    font-weight: 500;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: transparent;
+    border: 1px solid transparent;
+    padding: 0 36px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    height: 54px;
+    line-height: 54px;
+    letter-spacing: 0em;
+    color: $white;
+    background: $theme-color--default;
+    transform: translateY(0px);
+    
+    &:hover, &:active, &:focus{
+        font-weight: 500;
+        color: $white;
+        background: $theme-color--default;
+        transform: translateY(-3px);
+    }
+    &--secondary{
+        background-image: none;
+        background-color: $theme-color--two;
+        &:hover{
+            background-image: none;
+            background: $theme-color--two;
+        }
+    }
+    &--black{
+        background-image: none;
+        background-color: $black;
+        &:hover{
+            background-image: none;
+            background: $black;
+        }
+    }
+    &--white{
+        background-image: none;
+        background-color: $white;
+        color: $black;
+        box-shadow: 0 0 30px 5px rgba(0,0,0,0.07);
+        &:hover, &:focus{
+            background-image: none;
+            background: $white;
+            color: $black;
+        }
+    }
+    &--gradient{
+        background-image: none;
+        background: linear-gradient(150deg,#FF3F85 0,#FAA720 100%) !important;
+        &:hover{
+            background-image: none;
+            background: linear-gradient(150deg,#FF3F85 0,#FAA720 100%);
+        }
+    }
+
+    &--link{
+        color: $theme-color--default;
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+    &.ht-btn-default {
+        padding: 0 30px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        width: 180px;
+    }
+}
+
+
+.hover-style {
+    &-link {
+        position: relative;
+
+        &:after{
+            transition: $transition--default;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: $theme-color--two;
+        }
+
+        &:hover{
+            color: $theme-color--two;
+            &:after{
+                left: 0;
+                width: 100%;
+                right: auto;
+            }
+        }
+
+        &--secondary{
+            color: $theme-color--two;
+            &:after{
+                background-color: $theme-color--two;
+            }
+            &:hover{
+                color: $theme-color--two;
+            }
+        }
+
+        &--white{
+            color: $white;
+            &:after{
+                background-color: $white;
+            }
+            &:hover{
+                color: $white;
+            }
+        }
+
+        &--sub-color{
+            color: #6d70a6;
+            &:after{
+                background-color: #6d70a6;
+            }
+            &:hover{
+                color:  #6d70a6;
+            }
+        }
+    }
+    &-default {
+        position: relative;
+
+        &:after{
+            transition: $transition--default;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: $theme-color--default;
+        }
+
+        &:hover{
+            color: $theme-color--default;
+            &:after{
+                left: 0;
+                width: 100%;
+                right: auto;
+            }
+        }
+    }
+}
+
+/* Images Button */
+.image-btn {
+    border: 0;
+    box-shadow: none;
+    background: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* video pay link */
+
+.video-play{
+    i{
+        color: $theme-color--two;
+    }
+    span{
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-left: 10px;
+    }
+}
+/* button wrapper */
+
+.button-wrapper{
+    & > a{
+        border: none;
+        @media #{$extra-small-mobile}{
+            margin-bottom: 15px;
+        }
+
+        &:last-child{
+            @media #{$extra-small-mobile}{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* Text Button*/
+.btn-text {
+    color: $theme-color--default;
+    &:hover {
+        color: $theme-color--two;
+    }
+}
+
+.single-button-group {
+    & h5 {
+        margin-bottom: 10px;
+    }
+    & .button-group-wrap {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    & a {
+        margin: 10px;
+        &:hover, &:active, &:focus{
+            transform: translateY(-3px);
+        }
+    }
+}
+
+
+/*=====  End of Button  ======*/
+

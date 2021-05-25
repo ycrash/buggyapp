@@ -1,0 +1,77 @@
+/*=============================================
+=        39. Cybersecurity home Css             =
+=============================================*/
+.cybersecurity-hero {
+    overflow: hidden;
+    background: #F6FAFE;
+}
+
+.cybersecurity-hero-text {
+    max-width: 680px;
+    width: 100%;
+    float: right;
+    padding-left: 110px;
+    @media #{$tablet-device}{
+        padding-left: 0px;
+    }
+    @media #{$large-mobile}{
+        padding-left: 0;
+        float: inherit;
+        margin: 60px auto 0px;
+        text-align: center;
+    }
+    
+    & h6 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    & h3 {
+        font-weight: 700;
+    }
+    
+}
+.cybersecurity-hero-images {
+    position: relative;
+}
+.inner-img-one {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    @media #{$large-mobile}{
+        & img {
+            width: 400px;
+        }
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+}
+.inner-img-two {
+    @media #{$large-mobile}{
+        margin: auto !important;
+        text-align: center;
+        & img {
+            max-width: 254px;
+        }
+    }
+}
+
+.worldRotate {
+    -webkit-animation: worldRotate 20s linear infinite;
+    animation: worldRotate 20s linear infinite;
+}
+
+/*--- spinner keyframe ---*/
+@keyframes worldRotate {
+	0% { 	
+        transform: rotate(0deg) translateX(0px) rotate(0deg); 
+    }
+	100% { 
+        transform: rotate(0deg) translateY(0px) rotate(-360deg); 
+    }
+}

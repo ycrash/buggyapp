@@ -1,0 +1,60 @@
+/*=============================================
+=         37. Processing Hero Css             =
+=============================================*/
+
+.appointment-hero-bg {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url("../images/hero/home-appointment-hero-bg-image.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.appointment-hero-text {
+    @media #{$large-mobile}{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+.hero-button {
+    .video-content {
+        display: flex;
+        align-items: center;
+    }
+    .video-link .ht-popup-video .video-button__two .video-play {
+        background: $white;
+    }
+    .video-link .ht-popup-video .video-button__two .video-play-icon::before {
+        border-left-color: $theme-color--default;
+    }
+    .single-popup-wrap.video-link .ht-popup-video.video-button {
+        position: relative;
+        width: 78px;
+        height: 78px;
+    }
+    .video-text {
+        margin-top: 0;
+        margin-left: 35px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.78;
+    }
+    .ht-popup-video {
+        &.video-button {
+            & .video-mark {
+                & .wave-pulse {
+                    &::after , &::before {
+                        border: 3px solid $white;
+                        animation: zoomBig 3.25s linear infinite;
+                        animation-delay: 0s;
+                    } 
+                    &::before {
+                        animation-delay: .75s;
+                    }
+                }
+            }
+        }
+    }
+}

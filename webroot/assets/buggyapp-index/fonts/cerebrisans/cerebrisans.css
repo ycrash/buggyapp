@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Regular.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Regular.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Regular.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Regular.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Regular.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Italic.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Italic.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Italic.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Italic.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Italic.svg) format('svg');
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Light.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Light.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Light.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Light.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Light.svg) format('svg');
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Medium.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Medium.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Medium.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Medium.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Medium.svg) format('svg');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-SemiBold.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-SemiBold.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-SemiBold.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-SemiBold.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-SemiBold.svg) format('svg');
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Bold.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Bold.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Bold.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Bold.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Bold.svg) format('svg');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-ExtraBold.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-ExtraBold.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-ExtraBold.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-ExtraBold.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-ExtraBold.svg) format('svg');
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'CerebriSans';
+    src: url(assets/fonts/cerebrisans/CerebriSans-Heavy.eot);
+    src: url(assets/fonts/cerebrisans/CerebriSans-Heavy.eot#iefix) format('embedded-opentype'), url(assets/fonts/cerebrisans/CerebriSans-Heavy.ttf) format('truetype'), url(assets/fonts/cerebrisans/CerebriSans-Heavy.woff) format('woff'), url(assets/fonts/cerebrisans/CerebriSans-Heavy.svg) format('svg');
+    font-weight: 900;
+    font-style: normal
+}

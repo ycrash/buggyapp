@@ -1,0 +1,71 @@
+
+/*=============================================
+=        38. Resolutions home Css             =
+=============================================*/
+
+.resolutions-hero-bg {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url("../images/hero/home-resolutions-hero-bg-image.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    .vc_row-separator svg {
+        fill: #F8F8F8;
+    }
+}
+
+.resolutions-hero-space {
+    height: 880px;
+    display: block;
+    align-items: center;
+    display: flex;
+    
+    @media #{$laptop-device}{
+      height: 740px; 
+    }
+    @media #{$desktop-device}{
+      height: 670px; 
+    }
+    @media #{$tablet-device}{
+      height: 520px; 
+    }
+    @media #{$large-mobile}{
+      height: 480px; 
+    }
+    @media #{$small-mobile}{
+      height: 480px; 
+    }
+    
+}
+
+.hero-button-group  {
+    & .ht-btn {
+        margin: 10px;
+        font-size: 14px;
+        &.btn--white {
+            color: $theme-color--default;
+            & .btn-icon {
+                font-size: 10px;
+                margin-left: 0px;
+            }
+            &:hover {
+                background: $theme-color--default;
+                color: $white;
+            }
+        }
+    }
+}
+.resolutions-hero-bottom {
+    margin-top: -160px;
+    position: relative;
+    z-index: 4;
+    @media #{$tablet-device}{
+      margin-top: 20px;
+    }
+    @media #{$large-mobile}{
+       margin-top: 0px;
+    }
+    @media #{$small-mobile}{
+       margin-top: 0px;
+    }
+}

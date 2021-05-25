@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>SAML Configurations</comment>
+
+	<entry key="auth.saml">true</entry>
+
+	<!--
+		// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Identity Provider Data that we want connect with our SP
+		// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	-->
+
+	<!--
+	Identifier of the IdP entity  (must be a URI)
+	 -->
+	<entry key="onelogin.saml2.idp.entityid"></entry>
+
+	<!--
+	SSO endpoint info of the IdP. (Authentication Request protocol)
+	URL Target of the IdP where the SP will send the Authentication Request Message
+ 	-->
+	<entry key="onelogin.saml2.idp.single_sign_on_service.url"></entry>
+
+
+	<!--
+	// Public x509 certificate of the IdP
+	 -->
+	<entry key="onelogin.saml2.idp.x509cert"></entry>
+
+	<!--
+	// Instead of use the whole x509cert you can use a fingerprint
+	// (openssl x509 -noout -fingerprint -in "idp.crt" to generate it,
+	// or add for example the -sha256 , -sha384 or -sha512 parameter)
+	//
+	// If a fingerprint is provided, then the certFingerprintAlgorithm is required in order to
+	// let the toolkit know which Algorithm was used. Possible values: sha1, sha256, sha384 or sha512
+	// 'sha1' is the default value.
+	// onelogin.saml2.idp.certfingerprint =
+	// onelogin.saml2.idp.certfingerprint_algorithm = sha1
+	 -->
+	 <entry key="onelogin.saml2.idp.certfingerprint"></entry>
+</properties>

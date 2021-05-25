@@ -1,0 +1,49 @@
+/*=======================================
+=           Careers Job Listing         = 
+========================================*/
+
+.ht-simple-job-listing {
+    & .item {
+        border-radius: 5px;
+        padding: 33px 50px 36px;
+        &:nth-child(2n) {
+            background: #f6f2ed;
+        }
+        .job-info {
+            .job-time {
+                font-size: 18px;
+                margin-top: 12px;
+                display: block;
+            }  
+        }
+        .job-button {
+            & .ht-btn {
+                min-width: 155px;
+            }
+        }
+        @media #{$large-mobile}{
+            padding: 30px;
+            .job-description {
+                margin-top: 15px;
+            }
+            .job-button {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+/*=============================================
+=           30. Timeline Css           =
+=============================================*/
+.ht-timeline.style-01  {
+    & .col-md-6 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    & .tm-timeline-list {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 32px 0 65px;
+    }
+    .item {
+        position: relative;
+        @media #{$large-mobile}{
+            padding-left: 45px;
+            width: 100%;
+        }
+    }
+    .item + .item {
+        margin-top: 68px;
+    }
+    & .line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        height: 100%;
+        border-left: 2px solid #086ad8;
+        opacity: .15;
+        @media #{$large-mobile}{
+           left: 15px;
+        }
+    }
+    
+    &  .dots {
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 30px;
+        height: 30px;
+        color: #086ad8;
+        @media #{$large-mobile}{
+            right: auto;
+            left: 0;
+            transform: none;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            opacity: .3;
+            width: 30px;
+            height: 30px;
+        }
+        & .middle-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            z-index: 2;
+            border: 3px solid currentColor;
+            background: #fff;
+        }
+    }
+    
+    & .timeline-col {
+        
+        & .inner {
+            text-align: right;
+            width: 500px;
+            max-width: 100%;
+            @media #{$large-mobile}{
+                text-align: left;
+            }
+            & .year {
+                color: $theme-color--default;
+                font-size: 72px;
+                font-weight: 400;
+                line-height: 1;
+                margin-bottom: 27px;
+                @media #{$large-mobile}{
+                    font-size: 32px;
+                }
+            }
+            & .photo {
+                & img {
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    
+    
+    & .timeline-info {
+        & .inner {
+            padding-top: 130px;
+            float: right;
+            width: 500px;
+            max-width: 100%;
+            text-align: left;
+            @media #{$tablet-device}{
+               padding-top: 60px;
+            }
+            @media #{$large-mobile}{
+               padding-top: 30px;
+            }
+            
+        }
+        & .content-body {
+            display: inline-block;
+            width: 400px;
+            max-width: 100%;
+        }
+
+        & .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        & .text {
+            font-size: 18px;
+            line-height: 2;
+            @media #{$large-mobile}{
+                font-size: 16px;
+            }
+        }
+        
+    }
+    .item:nth-child(2n+1) {
+        .timeline-feature {
+            order: 3;
+            @media #{$large-mobile}{
+                order: -1;
+            }
+        }
+        .timeline-info > .inner {
+            float: left;
+            text-align: right;
+            @media #{$large-mobile}{
+                text-align: left;
+            }
+        }
+        .timeline-feature > .inner {
+            text-align: left;
+            float: right;
+        }
+        .timeline-feature > .inner {
+            text-align: left;
+            float: right;
+        }
+    }
+   
+}

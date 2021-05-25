@@ -1,0 +1,83 @@
+/*====================================
+=         42. Redraw Css             =
+=====================================*/
+
+.rev_redraw-wrapper {
+    overflow: hidden;
+}
+.rev_redraw-space {
+    padding-top: 230px;
+    padding-bottom: 230px;
+    @media #{$large-mobile}{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    
+}
+.redraw-content{
+    z-index: 4;
+    position: relative;
+}
+.redraw-images {
+    @media #{$large-mobile}{
+        & img {
+            max-width: 160px;
+        }
+    }
+    @media #{$large-mobile}{
+        & img {
+            max-width: 100px;
+        }
+    }
+}
+.redrow-1 {
+    overflow: hidden;
+    top: -205%;
+    position: absolute;
+    left: 10%;
+    @media #{$large-mobile}{
+        top: -150%;
+    }
+    @media #{$small-mobile}{
+        top: -130%;
+    }
+}
+.redrow-2 {
+    position: absolute;
+    left: 40%;
+    top: -150%;
+    @media #{$large-mobile}{
+        top: -80%;
+    }
+}
+.redrow-3 {
+    top: -205%;
+    position: absolute;
+    right: 10%;
+    @media #{$large-mobile}{
+        top: -150%;
+    }
+    @media #{$small-mobile}{
+        top: -130%;
+    }
+}
+.redrow-4 {
+    top: 0%;
+    position: absolute;
+    left: -10%;
+}
+.redrow-5 {
+    position: absolute;
+    left: 20%;
+    top: 150%;
+}
+.redrow-6 {
+    position: absolute;
+    right: 20%;
+    top: 150%;
+}
+.redrow-7 {
+    top: 0%;
+    position: absolute;
+    right: -10%;
+}

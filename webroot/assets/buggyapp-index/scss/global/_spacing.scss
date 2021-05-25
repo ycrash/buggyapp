@@ -1,0 +1,566 @@
+
+/*============================================
+=           02. Section Spacing Css          =
+=============================================*/
+
+.section-space{
+    
+    /* Section Padding Css */
+    &--ptb_120{
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        @media #{$tablet-device}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &--pt_120{
+        padding-top: 120px;
+
+        @media #{$tablet-device}{
+            padding-top: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+        }
+    }
+
+    &--pb_120{
+        padding-bottom: 120px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 60px;
+        }
+    }
+    &--ptb_100{
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        @media #{$tablet-device}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &--pt_100{
+        padding-top: 100px;
+
+        @media #{$tablet-device}{
+            padding-top: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+        }
+    }
+
+    &--pb_100{
+        padding-bottom: 100px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 80px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 60px;
+        }
+    }
+
+    &--ptb_90{
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+        @media #{$tablet-device}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &--pt_90{
+        padding-top: 90px;
+
+        @media #{$tablet-device}{
+            padding-top: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 40px;
+        }
+    }
+
+    &--pb_90{
+        padding-bottom: 90px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 40px;
+        }
+    }
+    
+    &--ptb_80{
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        @media #{$tablet-device}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &--pt_80{
+        padding-top: 80px;
+
+        @media #{$tablet-device}{
+            padding-top: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 40px;
+        }
+    }
+
+    &--pb_80{
+        padding-bottom: 90px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 40px;
+        }
+    }
+    
+    &--ptb_70{
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        @media #{$tablet-device}{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &--pt_70{
+        padding-top: 70px;
+
+        @media #{$tablet-device}{
+            padding-top: 40px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 30px;
+        }
+    }
+
+    &--pb_70{
+        padding-bottom: 70px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 40px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 30px;
+        }
+    }
+
+    &--ptb_60{
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @media #{$tablet-device}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &--pt_60{
+        padding-top: 60px;
+        
+        @media #{$tablet-device}{
+            padding-top: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 60px;
+        }
+    }
+
+    &--pb_60{
+        padding-bottom: 60px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 60px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 60px;
+        }
+    }
+
+    &--pt_40{
+        padding-top: 40px;
+
+        @media #{$tablet-device}{
+            padding-top: 30px;
+        }
+
+        @media #{$large-mobile}{
+            padding-top: 30px;
+        }
+    }
+
+    &--pb_40{
+        padding-bottom: 40px;
+
+        @media #{$tablet-device}{
+            padding-bottom: 30px;
+        }
+
+        @media #{$large-mobile}{
+            padding-bottom: 30px;
+        }
+    }
+
+    &--ptb_30{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &--pt_30{
+        padding-top: 30px;
+    }
+    
+    &--pb_30{
+        padding-bottom: 30px;
+    }
+
+    /* Section Margin Css */
+    
+   
+    &--mt_15{
+        margin-top: 15px;
+    }
+
+    &--mt_20{
+        margin-top: 20px;
+    }
+
+    &--mt_30{
+        margin-top: 30px;
+    }
+
+    &--mt_40{
+        margin-top: 40px;
+    }
+    &--mt_50{
+        margin-top: 50px;
+        @media #{$tablet-device}{
+            margin-top: 40px;
+        }
+        @media #{$large-mobile}{
+            margin-top: 30px;
+        }
+    }
+    &--mt_60{
+        margin-top: 60px;
+
+        @media #{$tablet-device}{
+            margin-top: 50px;
+        }
+
+        @media #{$large-mobile}{
+            margin-top: 30px;
+        }
+    }
+    &--mt_70{
+        margin-top: 70px;
+
+        @media #{$tablet-device}{
+            margin-top: 50px;
+        }
+
+        @media #{$large-mobile}{
+            margin-top: 30px;
+        }
+    }
+    &--mt_80{
+        margin-top: 80px;
+
+        @media #{$tablet-device}{
+            margin-top: 50px;
+        }
+
+        @media #{$large-mobile}{
+            margin-top: 30px;
+        }
+    }
+  
+    &--mt_100{
+        margin-top: 100px;
+
+        @media #{$tablet-device}{
+            margin-top: 80px;
+        }
+
+        @media #{$large-mobile}{
+            margin-top: 60px;
+        }
+    }
+    &--mt_120{
+        margin-top: 120px;
+
+        @media #{$tablet-device}{
+            margin-top: 80px;
+        }
+
+        @media #{$large-mobile}{
+            margin-top: 60px;
+        }
+    }
+
+    &--mb_15{
+        margin-bottom: 15px;
+    }
+
+    &--mb_20{
+        margin-bottom: 20px;
+    }
+
+    &--mb_30{
+        margin-bottom: 30px;
+    }
+
+    &--mb_40{
+        margin-bottom: 40px;
+        @media #{$large-mobile}{
+            margin-bottom: 30px;
+        }
+    }
+
+    &--mb_50{
+        margin-bottom: 50px;
+        @media #{$tablet-device}{
+            margin-bottom: 40px;
+        }
+        @media #{$large-mobile}{
+            margin-bottom: 30px;
+        }
+    }
+
+    &--mb_60{
+        margin-bottom: 60px;
+        @media #{$tablet-device}{
+            margin-bottom: 50px;
+        }
+        @media #{$large-mobile}{
+            margin-bottom: 30px;
+        }
+    }
+
+    &--mb_100{
+        margin-bottom: 100px;
+        @media #{$tablet-device}{
+            margin-bottom: 80px;
+        }
+        @media #{$large-mobile}{
+            margin-bottom: 60px;
+        }
+    }
+
+    &--mb_120{
+        margin-bottom: 120px;
+
+        @media #{$tablet-device}{
+            margin-bottom: 80px;
+        }
+
+        @media #{$large-mobile}{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-25{
+    margin-top: 25px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mt-40{
+    margin-top: 40px;
+}
+@media #{$large-mobile}{
+    .small-mt {
+        &__0 {
+            margin-top: 0px;
+        }
+    }
+    .small-mt {
+        &__10 {
+            margin-top: 10px;
+        }
+    }
+    .small-mt {
+        &__20 {
+            margin-top: 20px;
+        }
+    }
+    .small-mt {
+        &__30 {
+            margin-top: 30px;
+        }
+    }
+    .small-mt {
+        &__40 {
+            margin-top: 40px;
+        }
+    }
+    .small-mt {
+        &__50 {
+            margin-top: 50px;
+        }
+    }
+    .small-mt {
+        &__60 {
+            margin-top: 60px;
+        }
+    }
+    .small-mb {
+        &__30 {
+            margin-bottom: 30px;
+        }
+    }
+    .small-mb {
+        &__40 {
+            margin-bottom: 40px;
+        }
+    }
+    .small-mb {
+        &__50 {
+            margin-bottom: 50px;
+        }
+    }
+    .small-mb {
+        &__60 {
+            margin-bottom: 60px;
+        }
+    }
+}
+@media #{$tablet-device}{
+    .tablet-mt {
+        &__0 {
+            margin-top: 0px;
+        }
+    }
+    .tablet-mt {
+        &__30 {
+            margin-top: 30px;
+        }
+    }
+    .tablet-mt {
+        &__40 {
+            margin-top: 40px;
+        }
+    }
+    .tablet-mt {
+        &__50 {
+            margin-top: 50px;
+        }
+    }
+    .tablet-mt {
+        &__60 {
+            margin-top: 60px;
+        }
+    }
+    .tablet-mb {
+        &__30 {
+            margin-bottom: 30px;
+        }
+    }
+    .tablet-mb {
+        &__40 {
+            margin-bottom: 40px;
+        }
+    }
+    .tablet-mb {
+        &__50 {
+            margin-bottom: 50px;
+        }
+    }
+    .tablet-mb {
+        &__60 {
+            margin-bottom: 60px;
+        }
+    }
+}
+/*=====  End of spacing  ======*/

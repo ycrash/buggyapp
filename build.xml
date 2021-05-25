@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="buggyapp" default="dist" basedir=".">
+
+	<!-- set global properties for this bin -->
+	<property name="src" location="src"/>
+	<!--<property name="src-util" location="../tier1app-util/src/main/java"/>-->
+	<property name="test" location="test"/>
+	<property name="resources" location="resources"/>
+	<property name="webroot" location="webroot"/>
+	<property name="bin" location="webroot/WEB-INF/classes"/>
+	<property name="lib" location="webroot/WEB-INF/lib"/>
+	<property name="test-lib" location="test-lib"/>
+	<property name="resources" location="resources"/>
+	<property name="dist"  location="dist"/>
+
+	<path id="compile.classpath">
+		<pathelement location="${lib}/"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar; ${lib}\gson-2.3.1.jar;${lib}\buggyApp.jar;"/>
+	</path>
+
+	<path id="test.classpath">
+		<pathelement location="${lib}/"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar;${lib}\buggyApp.jar;"/>
+		<pathelement path="${lib}\testng-6.8.jar" />
+		<!-- <pathelement path="${test-lib}\mockito-all-1.10.19.jar" />-->
+	</path>
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the bin directory structure used by compile -->
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${dist}"/>
+		
+		<echo message="Using lib: ${lib}"/>
+		<echo message="Using src: ${src}"/>
+	</target>
+	
+	<target name="clean" description="clean up" >
+		<!-- Delete the ${bin} and ${dist} directory trees -->
+		<delete dir="${bin}"/>
+		<delete dir="${dist}"/>
+		<delete dir="webroot/META-INF"/>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source " >
+		
+		<echo message="Using Java version ${ant.java.version}."/>
+		
+		<!-- Compile the buggyapp code into ${bin} -->
+		<javac encoding="UTF-8" srcdir="${src}" destdir="${bin}" debug="true" source="1.8" target="1.8" classpathref="compile.classpath">
+		</javac>
+	</target>
+	
+	<target name="compile-cmd" depends="init"
+		        description="compile the source">
+				
+		<echo message="Using Java version ${ant.java.version}."/>
+		<!-- Compile the tier1app-util code into ${bin} -->
+		<javac encoding="UTF-8" srcdir="${src}" destdir="${dist}" debug="true" source="1.8" target="1.8" classpathref="compile.classpath">
+		</javac>
+	</target>
+	
+	<target name="test-compile" depends="compile" description="compile the source " >
+
+		<javac encoding="UTF-8" srcdir="${test}" destdir="${bin}" debug="true" source="1.8" target="1.8" classpathref="test.classpath">
+		</javac>
+	</target>
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+			<classpath location="${lib}/testng-6.8.jar" />
+		</taskdef>
+
+		<target name="testng" depends="test-compile">
+			
+			<copy todir="${bin}">
+				<fileset dir="${resources}" />
+			</copy>
+					
+			<!-- Assume test.path contains the project library dependencies -->
+			<testng classpathref="test.classpath" outputDir="${dist}\testng" haltOnFailure="true">
+				<classpath location="${bin}" />
+				<classfileset dir="${bin}" includes="**/*Test*.class" />
+			</testng>
+		</target>
+	
+	<target name="dist" depends="clean, compile" description="generate the distribution" >
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib"/>
+
+		<copy todir="${bin}">
+			<fileset dir="${resources}" />
+		</copy>
+		<delete file="${dist}/buggyapp.war" />
+		<jar jarfile="${dist}/buggyapp.war" >
+
+			<fileset dir="webroot"/>
+		</jar>
+	</target>
+	
+	<target name="dist-test" depends="clean, compile"
+        description="generate the distribution" >
+		<!-- Create the distribution directory -->
+
+		<copy todir="${bin}">
+			<fileset dir="${resources}" />
+		</copy>
+
+		<delete file="${dist}/buggyapp.war" />
+		<jar jarfile="${dist}/buggyapp.war" >
+
+			<fileset dir="webroot"/>
+		</jar>
+	</target>
+	
+	<target name="dist-prod" depends="clean, compile"
+        description="generate the distribution" >
+		<!-- Create the distribution directory -->
+
+		<mkdir dir="${dist}/lib"/>
+		<copy todir="${bin}">
+			<fileset dir="${resources}" />
+		</copy>
+
+		<delete file="${dist}/buggyapp.war" />
+		<jar jarfile="${dist}/buggyapp.war" >
+
+			<fileset dir="webroot"/>
+		</jar>
+	</target>
+	
+	<target name="dist-cmd" depends="clean, compile-cmd"
+	        description="generate the prod distribution">
+			
+			<!-- Create the distribution directory 
+			<mkdir dir="${dist}/lib"/>
+
+			<copy todir="${dist}/lib">
+				<fileset dir="${lib}" />
+			</copy>
+			-->	
+			
+			<delete file="${dist}/buggyApp.jar" />
+
+			<jar jarfile="${dist}/buggyApp.jar" >
+
+				<fileset dir="${dist}"/>
+			    <manifest>
+			      <attribute name="Main-Class"
+			                 value="com.buggyapp.LaunchPad"/>
+			    </manifest>			
+			</jar>
+		</target>
+	
+		<target name="dist-src" description="generate the source code distribution">
+					
+			<delete file="${dist}/buggyApp-src.zip" />
+
+			<jar jarfile="${dist}/buggyApp-src.zip" >
+
+				<fileset dir="${src}"/>
+			</jar>
+		</target>
+	
+	<target name="dist-ee" 
+		  		  depends="clean, compile"
+		          description="generate the buggyapp distribution" >
+			
+			<!-- Create the distribution directory -->
+			<mkdir dir="${dist}/lib"/>
+	
+			<copy todir="${bin}">
+				<fileset dir="${resources}" />
+			</copy>
+			
+			<!-- Create META-INF directory -->
+			<mkdir dir="webroot/META-INF"/>
+			<copy todir="webroot/META-INF" file="${resources}/context.xml"></copy>
+		
+			<delete file="${bin}/license.lic"/>
+			<delete file="${bin}/context.xml"/>
+			<delete file="${bin}/saml.xml"/>
+			
+			<property name="enterprise.version" value="0_5"/>
+			<copy todir="${dist}/enterprise/">
+				<filterset>
+					<filter token="enterprise.version" value="${enterprise.version}"/>
+				</filterset>	
+				<fileset dir="embedded-runner" includes="**/version*"/>
+			</copy>
+			<copy todir="${bin}">
+				<fileset dir="${dist}/enterprise/" includes="**/version**"/>
+			</copy>
+			
+			<!-- Add index and error files -->
+			<copy file="webroot/ee-index.jsp" tofile="webroot/index.jsp" overwrite="true"/>
+			
+			<delete file="webroot/sitemap.xml"/>
+			<delete file="${dist}/enterprise/buggyapp.war" />
+			<jar jarfile="${dist}/enterprise/buggyapp.war">
+				<fileset dir="webroot" excludes="WEB-INF/lib/**, **/testng-*.jar" />
+			</jar>
+		
+			<!-- build the server -->
+			<copy todir="${dist}/enterprise/">
+				<fileset dir="embedded-runner" includes="**/launch*, **/webapp-runner-8*, **/buggyApp.jar*, **/README.txt"/>
+			</copy>
+	
+			<!-- Create Lib directory -->
+			<mkdir dir="${dist}/enterprise/lib"/>
+			<copy todir="${dist}/enterprise/lib">
+				<fileset dir="webroot/WEB-INF/lib/" excludes="**/testng-*.jar" />
+			</copy>
+			
+			<zip destfile="${dist}/enterprise/buggyapp-${enterprise.version}.zip" basedir="${dist}/enterprise/"/>	
+			<delete dir="${dist}/enterprise/lib" />
+			<delete>
+			    <fileset dir="${dist}/enterprise/" excludes="**/buggyapp*.zip"/>
+			</delete>
+		</target>
+</project>

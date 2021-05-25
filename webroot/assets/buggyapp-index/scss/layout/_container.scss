@@ -1,0 +1,212 @@
+
+/*=============================================
+=            04. container Css            =
+=============================================*/
+
+.container-fluid{
+    &--cp-150{
+        @media (min-width: 1600px){
+            padding: 0 150px !important;
+        }
+        @media (min-width: 1600px) and (max-width: 1664px){
+            padding: 0 110px !important;
+        }
+        @media (min-width: 1200px){
+            padding: 0 50px;
+        }
+    }
+    &--cp-140{
+        @media (min-width: 1700px){
+            padding: 0 140px !important;
+        }
+        @media (min-width: 1700px)  and (max-width: 1663px){
+            padding: 0 100px !important;
+        }
+        @media (min-width: 1600px) and (max-width: 1664px){
+            padding: 0 30px !important;
+        }
+        @media (min-width: 1200px){
+            padding: 0 30px;
+        }
+    }
+    &--cp-120{
+        @media (min-width: 1600px){
+            padding: 0 120px !important;
+        }
+        @media (min-width: 1600px) and (max-width: 1664px){
+            padding: 0 110px !important;
+        }
+        @media (min-width: 1200px){
+            padding: 0 50px;
+        }
+    }
+    &--cp-80{
+        @media (min-width: 1600px){
+            padding: 0 80px !important;
+        }
+        @media (min-width: 1600px) and (max-width: 1664px){
+            padding: 0 30px !important;
+        }
+        @media (min-width: 1200px){
+            padding: 0 30px;
+        }
+    }
+    &--cp-60{
+        padding: 0 60px;
+        @media #{$large-mobile}{
+            padding: 0 15px;
+        }
+    }
+    &--cp-30{
+        padding: 0 30px;
+        @media #{$large-mobile}{
+            padding: 0 15px;
+        }
+    }
+}
+.page-content-double-sidebar{
+    @media (min-width: 1200px){
+        .container {
+            max-width: 1600px;
+        }
+    }
+}
+@media (max-width: 1919px){
+    .container-fluid{
+        &--cp-60{
+            padding: 0 30px;
+        }
+        &--cp-80{
+            padding: 0 40px;
+            @media #{$large-mobile}{
+                padding: 0 30px;
+            }
+
+            @media #{$small-mobile}{
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1200px;
+    }
+}
+.container_fl {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-06__left {
+    width: 600px;
+    max-width: 100%;
+    float: right;
+    @media #{$tablet-device,$large-mobile}{
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+}
+.col-06__right {
+    width: 600px;
+    max-width: 100%;
+    float: left;
+    @media #{$tablet-device,$large-mobile}{
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.banner-image__content {
+    width: 570px;
+    max-width: 100%;
+}
+
+
+.row--35 {
+    margin-left: -35px;
+    margin-right: -35px;
+
+    // Responsive
+    @media #{$desktop-device} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$tablet-device} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$large-mobile} {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+
+    &>[class*="col"],
+    &>[class*="col-"] {
+        padding-left: 35px;
+        padding-right: 35px;
+
+        // Responsive
+        @media #{$desktop-device} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media #{$tablet-device} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media #{$large-mobile} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+}
+.row--30 {
+    margin-left: -30px;
+    margin-right: -30px;
+
+    // Responsive
+    @media #{$desktop-device} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$tablet-device} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$large-mobile} {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+
+    &>[class*="col"],
+    &>[class*="col-"] {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        // Responsive
+        @media #{$desktop-device} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media #{$tablet-device} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media #{$large-mobile} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+}
+
+/*=====  End of container  ======*/

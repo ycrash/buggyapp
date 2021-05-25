@@ -1,0 +1,190 @@
+/*=============================================
+=               28. Tabs Css                =
+=============================================*/
+.ht-tab-menu {
+    margin: 0 -10px;
+    & li {
+        margin: 0 10px;
+        & a {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #ededed !important;
+            border: rgb(237, 237, 237);
+            background: #fff;
+            color: #696969;
+            padding: 21px 20px 19px;
+            min-width: 200px;
+            border-radius: 5px !important;
+            &.active{
+                color: $theme-color--default;
+                border-color: $theme-color--default !important;
+            }
+            @media #{$desktop-device}{
+                padding: 21px 10px 19px;
+            }
+            @media #{$large-mobile,$tablet-device}{
+                padding: 12px 13px 12px;
+                min-width: 150px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &_two {
+        & li {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+    }
+}
+.tab-history-image {
+    img {
+        border-radius: 5px;
+    }
+}
+.tab-content-inner {
+    
+    & .text {
+       font-size: 18px;
+        font-size: 18px;
+        
+    }
+    
+}
+
+.tab-slider-nav {
+    &--list {
+        display: block;
+        margin-bottom: 50px;
+        opacity: 0.6;
+        &:hover {
+            opacity: 0.9;
+        }
+        & .ht-slider-tab-icon {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            float: left;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            font-size: 32px;
+            border-radius: 15px;
+            color: #fff;
+            box-shadow: 0 15px 50px rgba(89, 69, 230, 0.12);
+            margin-right: 30px;
+        }
+        & h5 {
+            display: block;
+            color: #fff;
+            max-width: 280px;
+        }
+        p {
+            margin-top: 26px;
+            display: block;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            color: #fff;
+        }
+        @media #{$desktop-device}{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+    & .slick-current {
+        & .tab-slider-nav--list {
+            opacity: 1;
+            & .ht-slider-tab-icon {
+                background-image: linear-gradient(-225deg, #f8c59b 0%, #e68c60 100%);
+            }
+        }
+    }
+}
+
+.start-ups-left-tab {
+    & .tab-slider-nav {
+        &--list {
+            display: block;
+            margin-bottom: 50px;
+            opacity: 0.6 !important;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        & .slick-current {
+            & .tab-slider-nav--list {
+                opacity: 1 !important;
+                & .ht-slider-tab-icon {
+                    background-image: linear-gradient(-225deg, #f8c59b 0%, #e68c60 100%) !important;
+                }
+            }
+        }
+    }
+}
+
+.tab-slider-images {
+    & .slick-dots {
+        text-align: center;
+        margin-top: 30px;
+        & li {
+            display: inline-block;
+            margin: 0 15px;
+            & button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 8px;
+                height: 8px;
+                padding: 5px;
+                cursor: pointer;
+                border: 0;
+                outline: none;
+                border-radius: 50%;
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                &:hover {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            
+            &.slick-active {
+                & button {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 9px #ededed;
+                }
+            }
+        }
+    }
+}
+
+
+.modern-grid--6 {
+    display: grid;
+    grid-row-gap: 60px;
+    grid-template-columns: repeat( 6,1fr);
+    @media #{$desktop-device}{
+        grid-template-columns: repeat( 5,1fr);
+    }
+    @media #{$tablet-device}{
+        grid-template-columns: repeat( 3,1fr);
+    }
+    @media #{$large-mobile}{
+        grid-template-columns: repeat( 2,1fr);
+    }
+}
+
+
+
+
+
+
+
+
+

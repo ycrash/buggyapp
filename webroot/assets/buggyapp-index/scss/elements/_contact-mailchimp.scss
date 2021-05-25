@@ -1,0 +1,135 @@
+/*======================================
+    13. Contact Form And Newsletter Css 
+=======================================*/
+
+.contact-input {
+    margin: 0 -10px;
+    .contact-inner {
+        float: left;
+        margin: 0 0 20px;
+        padding: 0 10px;
+        width: 50%;
+        @media #{$small-mobile}{
+            width: 100%;
+        }
+    }
+}
+.contact-inner {
+    margin: 0 0 20px;
+    & input , textarea {
+        width: 100%;
+        color: #ababab;
+        border-color: #f8f8f8;
+        background-color: #f8f8f8;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        border: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid #eee;
+        border-top-color: rgb(238, 238, 238);
+        border-right-color: rgb(238, 238, 238);
+        border-bottom-color: rgb(238, 238, 238);
+        border-left-color: rgb(238, 238, 238);
+        border-radius: 5px;
+        padding: 3px 20px;
+        height: 56px;
+    }
+    &  textarea {
+        height: 150px;
+        padding: 15px;
+    }
+}
+.peatures_image-wrap {
+    margin-right: -168px !important;
+    margin-left: 80px !important;
+    @media #{$laptop-device}{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+    @media #{$desktop-device}{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+    @media #{$tablet-device}{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+    @media #{$large-mobile}{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+}
+
+/* Newsletter Css */
+
+.newsletter-form {
+    &--one {
+        & input {
+            border-color: transparent;
+            background: rgba(0, 0, 0, 0.07);
+            min-width: 275px;
+            border-radius: 5px;
+            padding: 3px 20px;
+            height: 56px;
+            margin-right: 15px;
+            border: 1px solid transparent;
+            margin-bottom: 20px;
+            color: $white;
+            @media #{$tablet-device}{
+                min-width: 245px;
+            }
+            @media #{$large-mobile}{
+                min-width: 165px;
+            }
+            @media #{$small-mobile}{
+                min-width: 100%;
+            }
+            
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+               color: $white;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+               color: $white;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+               color: $white;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: $white;
+            }
+            
+            
+        }    
+        input[type="text"]:focus, input[type="email"]:focus{
+            color: $white;
+            border-color:$white;
+        }
+    }
+    &--two {
+        & input {
+            border-color: transparent;
+            background: rgba(0, 0, 0, 0.07);
+            min-width: 275px;
+            border-radius: 5px;
+            padding: 3px 20px;
+            height: 56px;
+            margin-right: 15px;
+            border: 1px solid transparent;
+            margin-bottom: 20px;
+            @media #{$tablet-device}{
+                min-width: 245px;
+            }
+            @media #{$large-mobile}{
+                min-width: 165px;
+            }
+            @media #{$small-mobile}{
+                min-width: 100%;
+            }
+        }   
+    }
+}
+.btn-text-theme {
+    color: #5945e6;
+}

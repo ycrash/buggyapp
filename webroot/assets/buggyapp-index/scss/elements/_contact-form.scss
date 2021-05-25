@@ -1,0 +1,408 @@
+/*======================================
+=         33. Contact Us Css            =
+=======================================*/
+
+.contact-form__two {
+    input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus, select:focus, select:focus, textarea:focus {
+        color: #222;
+        border-color: transparent;
+        background: #fff;
+        box-shadow: 0 0 40px rgba(51,51,51,.1);
+    }
+    select {
+        &:focus {
+            background: #fff url("../images/icons/selector-icon.png") no-repeat center right 20px !important;
+        }
+    }
+}
+
+.appointment-contact-bg {
+    background: url(../images/bg/home-appointment-contact-bg-image.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.service-contact-bg {
+    background-color: #002fa6;
+    background-image: url(../images/bg/mitech-home-services-contact-bg.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.processing-contact-us-bg {
+    background-color: #002fa6;
+    background-image: url(../images/bg/mitech-processing-contact-bg.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.contact-title {
+    & .sub-title {
+        font-size: 18px;
+    }
+}
+.contact-input {
+    margin: 0 -10px;
+    .contact-inner {
+        float: left;
+        margin: 0 0 20px;
+        padding: 0 10px;
+        width: 50%;
+        @media #{$small-mobile}{
+            width: 100%;
+        }
+    }
+}
+.contact-inner {
+    margin: 0 0 20px;
+    & input , textarea {
+        width: 100%;
+        color: #000;
+        border-color: #f8f8f8;
+        background-color: #f8f8f8;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        border: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid #eee;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color:transparent;
+        border-radius: 5px;
+        padding: 3px 20px;
+        height: 56px;
+    }
+    &  textarea {
+        height: 150px;
+        padding: 15px;
+    }
+    & select {
+        color: #777;
+    }
+}
+
+.infotechno-contact-us-bg {
+    background-color: #eff2f6;
+    background-image: url(../images/bg/home-infotechno-contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.conact-us-wrap-one {
+    @media #{$large-mobile,$tablet-device}{
+        margin-bottom: 30px;
+    }
+    .heading {
+        position: relative;
+        padding-left: 34px;
+        font-weight: 600;
+        line-height: 1.4;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 4px;
+            height: 94%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-color: #d2a98e;
+        }
+    }
+    & .sub-heading {
+        margin-top: 15px;
+        font-size: 18px;
+        margin-left: 34px;
+        color: #696969;
+    }
+}
+.contact-info-one, .contact-info-two, .contact-info-three {
+    & .icon { 
+        font-size: 40px;
+        color: #086ad8;
+    }
+    & .heading {
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    & .call-us {
+        line-height: 1.17;
+        color: #002fa6;
+        position: relative;
+        display: inline-block;
+        &::before {
+            content: '';
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            position: absolute;
+            left: auto;
+            right: 0;
+            z-index: 1;
+            -webkit-transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+            transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+            background: currentColor;
+        }
+        &:hover {
+            color: #002fa6;
+            &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+        & a {
+            &:hover {
+                color: #002fa6;
+            }
+        }
+    }
+    & .btn--secondary {
+        min-width: 230px;
+        &:hover {
+            background: $theme-color--default;
+        }
+    }
+}
+
+.contact-info-two {
+    & .icon { 
+        color: #fff;
+    }
+    & .heading {
+        color: rgba(255,255,255,0.8);
+    }
+    & .call-us {
+        color: $theme-color--two;
+        &:hover {
+            color: $theme-color--two;
+        }
+        & a {
+            &:hover {
+                color: $theme-color--two;
+            }
+        }
+    }
+    & .btn--secondary {
+        background: $white;
+        color: $theme-color--default;
+        &:hover {
+            background: $theme-color--two;
+            color: $white;
+        }
+    }
+}
+
+.contact-info-three {
+    @media #{$tablet-device,$large-mobile}{
+        margin-top: 60px;
+    }
+    & .heading {
+        margin-bottom: 30px;
+    }
+    & .call-us {
+        margin-bottom: 20px;
+    }
+    & .location-text-button {
+        .button-icon {
+            height: 56px;
+            width: 56px;
+            line-height: 56px;
+            border-radius: 50%;
+            text-align: center;
+            background: #f6f2ed;
+            margin-right: 14px;
+            display: inline-block;
+            &::before {
+                content: '\f3c5';
+                font-style: normal;
+                line-height: 56px;
+                text-align: center;
+                color: $theme-color--default;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 900;
+            }
+        }
+        .button-text {
+            font-weight: 500;
+            color: $theme-color--default;
+            position: relative;
+            &::after {
+                content: '';
+                width: 0;
+                height: 1px;
+                bottom: 0;
+                position: absolute;
+                left: auto;
+                right: 0;
+                -webkit-transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+                transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+                background: currentColor;
+            }
+        }
+        &:hover {
+            & .button-text {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+    }
+    
+}
+.processing-computing-area {
+    padding: 150px 0;
+    @media #{$desktop-device,$tablet-device}{
+       padding: 100px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 60px 0;
+    }
+}
+
+.computing-info-box {
+    & h2 {
+        font-size: 64px;
+        line-height: 1.13;
+        color: #002fa6;
+        @media #{$tablet-device}{
+            font-size: 42px;
+        }
+        @media #{$large-mobile}{
+            font-size: 32px;
+        }
+    }
+}
+.contact-form-service-wrap {
+    background: #fff;
+    box-shadow: 0 2px 30px rgba(0,0,0,.1);
+    padding: 42px 50px 50px;
+    border-radius: 5px;
+    @media #{$large-mobile}{
+        padding: 42px 20px 50px;
+    }
+}
+.business-solution-form-wrap {
+    max-width: 400px;
+    margin-left: auto;
+    background: #fff;
+    box-shadow: 0 2px 30px rgba(0,0,0,.1);
+    padding: 42px 30px 51px;
+    border-radius: 5px;
+    text-align: center;
+    @media #{$tablet-device,$large-mobile}{
+       margin: auto;
+    }
+}
+.ht-star-rating {
+    &.lg-style {
+        color: #fb0;
+        font-size: 24px;
+        & span + span {
+            margin-left: 11px;
+        }
+    }
+}
+.contact-info{
+    @media #{$tablet-device, $large-mobile}{
+       margin-bottom: 60px;
+    }
+    &.sytle-one,
+    &.style-two {
+        @media #{$tablet-device, $large-mobile}{
+            margin-top: 60px;
+            &.service-contact {
+                margin-top: 0;
+            }
+        }
+        .contact-info-title-wrap {
+            & .sub-text {
+                margin-top: 20px;
+                color: $white;
+                font-size: 18px;
+            }
+        }
+
+        .contact-list-item {
+            & .single-contact-list {
+                display: block;
+            }
+            & .content  {
+                display: flex;
+                margin-top: 55px;
+                &  .icon {
+                    color: #fff;
+                    border-color: #fff;
+                    font-size: 40px;
+                    margin-right: 10px;
+                    flex-shrink: 0;
+                    min-width: 54px;
+                }
+                .main-content {
+                    .heading {
+                        font-size: 15px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        line-height: 1.78;
+                        margin-bottom: 13px;
+                        color: rgba(255,255,255,0.8);
+                    }
+                    .text {
+                        color: $theme-color--two;
+                        font-size: 34px;
+                        font-weight: 700;
+                        line-height: 1.17;
+                        @media #{$desktop-device , $tablet-device}{
+                           font-size: 24px;
+                        }
+                        @media #{ $large-mobile}{
+                           font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        .contact-info-title-wrap {
+            & .sub-text {
+                color: #696969;
+            }
+        }
+        .contact-list-item {
+            & .content  {
+                &  .icon {
+                    color: $theme-color--two;
+                }
+                .main-content {
+                    .heading {
+                        color: #333333;
+                    }
+                    .text {
+                        color: $theme-color--default;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conact-info__list {
+    & li {
+        margin-bottom: 7px;
+    }
+}
+.conact-us-wrap-one.managed-it .heading {
+    line-height: 1.67;
+    font-weight: 800;
+}

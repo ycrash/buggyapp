@@ -1,0 +1,161 @@
+/*=============================================
+=        26. Social Networks Css            =
+=============================================*/
+.ht-social-networks {
+    & .item {
+        display: inline-block;
+        & .social-link {
+            display: block;
+            padding: 5px 8px;
+        }
+    }
+    &.large-icon {
+        & .social-link {
+            padding: 5px 13px;
+            font-size: 20px;
+        }
+    }
+    &.extra-large-icon {
+        & .social-link {
+            padding: 5px 15px;
+            font-size: 30px;
+        }
+    }
+    &.flat-round,
+    &.solid-rounded-icon {
+        & .item {
+            margin: 8px;
+        }
+        & .social-link {
+            font-size: 18px;
+            display: block;
+            text-align: center;
+            height: 48px;
+            width: 48px;
+            line-height: 40px;
+            background: #ededed;
+            color: #696969;
+            border-radius: 50%;
+            position: relative;
+            &:hover {
+                color: $white;
+                background: $theme-color--default;
+            }
+        }
+        
+    }
+    &.solid-rounded-icon {
+        & .social-link {
+            background: transparent;
+            border: 1px solid #e0e0e0;
+            &:hover {
+                border: 1px solid $theme-color--default;
+                color: $white;
+            }
+        }
+        &.social-white {
+            & .social-link {
+                color: $white;
+                &:hover {
+                    border: 1px solid $white;
+                    color: $theme-color--default;
+                    background: $white;
+                }
+            }
+        }
+    }
+    
+    &.icon-tilte {
+        & .link-icon {
+            font-size: 16px;
+            min-width: 16px;
+            margin-right: 10px;
+        }
+    }
+    &.tilte-style {
+        & .social-link {
+            position: relative;
+            &::before {
+                content: '-';
+                position: absolute;
+                top: 50%;
+                left: -5px;
+                transform: translateY(-50%);
+                color: #333;
+            }
+            
+            &:hover {
+                & .link-text {
+                    &::after {
+                        background-color: $theme-color--two;
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        & .item {
+            &:first-child {
+                & .social-link {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        & .link-text {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: #333;
+            position: relative;
+            padding: 5px 0;
+            z-index: 1;
+            &::before {
+                content: '';
+                height: 2px;
+                bottom: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: -2;
+                background: rgba(0, 0, 0, 0.2);
+            }
+            &::after {
+                content: '';
+                height: 2px;
+                width: 0;
+                bottom: 0;
+                position: absolute;
+                left: auto;
+                right: 0;
+                z-index: -1;
+                transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+            }
+        }
+    }
+    &.white-tilte-social {
+        & .social-link {
+            &::before {
+                color: rgba(255,255,255,0.7);
+            }
+            
+            &:hover {
+                & .link-text {
+                    &::after {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        
+        & .link-text {
+            color: #fff;
+            &::before {
+                background: rgba(255,255,255,0.7);
+            }
+        }
+    }
+}
+

@@ -1,0 +1,209 @@
+/*======================================
+=          27. Listing Css              =
+=======================================*/
+.separator-list {
+    & .list-item {
+        position: relative;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+        &::before {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #eee;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0px;
+            &::before {
+                display: none;
+            }
+        }
+        & a {
+            line-height: 16px;
+        }
+    }
+}
+.check-list {
+    & .list-item {
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 10px;
+        &::before {
+            color: $theme-color--default;
+            content: '\f00c';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            display: block;
+            font-size: 13px;
+            line-height: 1;
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: 900;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0px;
+        }
+        & a {
+            line-height: 16px;
+        }
+    }
+    &.check-list-color-two {
+        & .list-item {
+            &::before {
+                color: $theme-color--two;
+            }
+        }
+    }
+}
+.circle-list {
+    & .list-item {
+        position: relative;
+        padding-left: 14px;
+        margin-bottom: 12px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #999;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0px;
+        }
+        & a {
+            line-height: 16px;
+        }
+    }
+}
+.icon-list {
+    & .list-item {
+        position: relative;
+        padding-left: 0px;
+        margin-bottom: 12px;
+        & .list__icon {
+            color: $theme-color--default;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        & a {
+            line-height: 16px;
+        }
+    }
+}
+ol {
+    min-width: 45px;
+    margin: 0;
+    padding-left: 30px;
+}
+.automatic-numbered-list {
+    & .list-item {
+        position: relative;
+        padding-left: 0px;
+        margin-bottom: 12px;
+        font-size: 24px;
+        color: #333;
+        line-height: 1.2;
+        font-weight: 400;
+        & a {
+            line-height: 16px;
+        }
+    }
+}
+.ht-list {
+    &.style-auto-numbered-02 {
+        & .list-item {
+            position: relative;
+            padding: 0;
+            margin-bottom: 62px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & .link {
+                display: block;
+                &:hover {
+                    
+                    .title {
+                        color: $theme-color--default;
+                        &::after {opacity: 1;
+                            visibility: visible;
+                            transform: translateX(0);
+                            color: $theme-color--default;
+                            
+                        }
+                        &::before {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                    .marker {
+                        color: $theme-color--default;
+                    }
+                }
+            }
+        }
+        & .marker {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-right: 10px;
+            min-width: 45px;
+            color: #ababab;
+            display: inline-block;
+            float: left;
+        }
+        .title-wrap {
+            overflow: hidden;
+        }
+        & .title {
+            font-size: 24px;
+            line-height: 1.2;
+            margin-top: 14px;
+            padding-top: 20px;
+            border-top: 2px solid #ededed;
+            transition: $transition--default;
+            padding-right: 15px;
+            &::before {
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 400;
+                content: '\f178';
+                position: absolute;
+                top: 38px;
+                right: 0;
+                color: #333;
+                transition: $transition--default;
+            }
+            &::after {
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 400;
+                content: '\f178';
+                position: absolute;
+                top: 38px;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-100%);
+                transition: $transition--default;
+            }
+        }
+    }
+}

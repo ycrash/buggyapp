@@ -1,0 +1,185 @@
+/*=======================================
+=            07. Sidebar Css           =
+=========================================*/
+
+.page-sidebar-right {
+    padding-left: 30px;
+    @media #{$laptop-device , $tablet-device,  $large-mobile}{
+        padding-left: 0;
+    }
+}.page-sidebar-left {
+    padding-right: 30px;
+    @media #{$laptop-device , $tablet-device,  $large-mobile}{
+        padding-right: 0;
+    }
+}
+.page-sidebar-right,.page-sidebar-left {
+    @media #{ $tablet-device,  $large-mobile}{
+        margin-top: 60px;
+    }
+}
+.sidebar-widget + .sidebar-widget {
+    margin-top: 40px;
+}
+.sidebar-widget-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.widget-search {
+    position: relative;
+    & input {
+        width: 100%;
+        outline: none;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 3px 20px;
+        padding-right: 20px;
+        height: 56px;
+        color: #ababab;
+        border-color: #f8f8f8;
+        background-color: #f8f8f8;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        padding-right: 72px;
+        
+    }
+    .search-submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0 5px 5px 0;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+        background: none;
+        box-shadow: none;
+        transform: none;
+        &:hover {
+            color: $white;
+            background: $theme-color--default;
+        }
+    }
+}
+
+
+.widget-blog-recent-post {
+    & ul {
+        & li {
+            &:first-child {
+                & a {
+                    margin-top: -16px;
+                }
+            }
+            & a {
+                position: relative;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 16px 0 16px 30px;
+                
+                &::before,
+                &::after {
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: 900;
+                    transition: $transition--default;
+                }
+                &::after,
+                &::before {
+                    content: '\f30b';
+                    position: absolute;
+                    top: 22px;
+                    left: 0;
+                }
+                &::before {
+                    opacity: 0;
+                    visibility: hidden;
+                    -webkit-transform: translateX(-100%);
+                    -ms-transform: translateX(-100%);
+                    transform: translateX(-100%);    
+                }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                        -webkit-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    &::after {
+                        opacity: 0;
+                        visibility: hidden;
+                        -webkit-transform: translateX(100%);
+                        -ms-transform: translateX(100%);
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.widget-tag {
+    & .ht-btn {
+        color: #ababab; 
+        background: #f5f5f5;
+        margin-right: 10px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        &:hover {
+            color: #ffffff;
+            background: $theme-color--default;
+        }
+    }
+}
+
+.widget-product-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    & .thumbnail {
+        max-width: 150px;
+        float: left;
+        margin-right: 20px;
+        margin-left: 0;
+        width: 80px;
+    }
+    & .info {
+        & .product-title {
+            font-weight: 400;
+            font-size: 16px;
+        }
+        & .star-rating {
+            & a {
+                display: inline-block;
+                color: #ffb805;
+                line-height: 1;
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+        & .price-box {
+            margin-top: 5px;
+            & .old-price {
+                font-size: .88em;
+                font-weight: 400;
+                color: #b6b7d2;
+                text-decoration: line-through;
+            } 
+            & .new-price {
+                font-size: 14px;
+                font-weight: 500;
+                color: #6d70a6;
+            } 
+        }
+    }
+}
+
+/*=====  End of Sidebar  ======*/

@@ -1,0 +1,28 @@
+/*========================================
+=        20. Message Box Css            =
+==========================================*/
+.ht-message-box {
+    background: #eee;
+    padding: 27px 30px 27px 50px;
+    font-weight: 500;
+    border-radius: 5px;
+    & .icon {
+        margin-right: 10px;
+    }
+    &.style-info {
+        color: #5b63fe;
+        background: rgba(91, 99, 254, 0.1);
+    }
+    &.style-success {
+        background: rgba(56, 203, 137, 0.1);
+        color: #38cb89;
+    }
+    &.style-error {
+        background: rgba(254, 40, 84, 0.1);
+        color: #fe2854;
+    }
+    &.style-warning {
+        color: #fb0;
+        background: rgba(255, 187, 0, 0.1);
+    }
+}

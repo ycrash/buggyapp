@@ -1,0 +1,204 @@
+/*===================================
+=          32. Project Css           =
+====================================*/
+.projectinfotechno-bg {
+    background-image: url(../images/patterns/mitech-home-infotechno-case-study-section-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.projects-slider__container {
+    .projects-wrap {
+        &.style-01 {
+            display: block;
+            .projects-image-box {
+                margin: 20px 15px 35px;
+            }
+        }
+    }
+}
+.projects-wrap {
+    &.style-01 {
+        display: block;
+        .projects-image-box {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 18px 40px -10px rgba(51,51,51,.1);
+            position: relative;
+            margin-bottom: 30px;
+            /*margin: 20px 15px 35px;*/
+        }
+
+        & .content {
+            padding: 25px 26px 94px;
+            padding-bottom: 88px;
+            & .heading {
+                font-weight: 600;
+                line-height: 1.25;
+                margin-bottom: 2px;
+                color: #333 !important;
+            }
+            & .post-categories {
+                color: $theme-color--default;
+                margin-bottom: 2px;
+            }
+            & .text{
+                color: $body-text-color;
+                margin-top: 13px;
+            }
+
+            & .box-projects-arrow {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                height: 56px;
+                line-height: 55px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                border-top: 1px solid #eee;
+                color: $theme-color--default;
+                &::before{
+                    background-color: $theme-color--default;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: translateY(100%);
+                    transition: $transition--default;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            & .content {
+                & .heading {
+                    color: $theme-color--default;
+                }
+                & .box-projects-arrow {
+                    color: $white;
+                    &::before {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+    &.style-2 {
+        margin-bottom: 30px;
+        display: block;
+        .projects-image-box {
+            & img {
+                border-radius: 8px;
+            }
+        }
+        & .content {
+            padding:  22px 15px 24px;
+            text-align: center;
+            & .heading {
+                font-weight: 600;
+                line-height: 1.25;
+                color: #333 !important;
+            }
+            & .post-categories {
+                color: $theme-color--default;
+                margin-bottom: 5px;
+            }
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.messonry-button{
+    button{
+        padding: 0;
+        border: 0 none;
+        position: relative;
+        background: transparent;
+        span{
+            position: relative;
+            display: inline-block;
+            padding: 0 5px;
+            margin: 5px 17px;
+            position: relative;
+            border-bottom: 2px solid transparent;
+            &.filter-text{
+                font-size: 18px;
+                font-weight: 500;    
+                line-height: 1.74;
+                color: $theme-color--default;
+                -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+                transition: all .3s cubic-bezier(.645,.045,.355,1);
+            }
+            &.filter-counter{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                visibility: hidden;
+                margin: 0 auto;
+                min-width: 34px;
+                height: 24px;
+                line-height: 24px;
+                border-radius: 3px;
+                font-size: 12px;
+                background-color :$theme-color--default;
+                color: #fff;
+                text-align: center;
+                opacity: 0;
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+                transition: all .3s cubic-bezier(.645,.045,.355,1);
+                font-weight: 600;
+                
+                &::before{
+                    position: absolute;
+                    right: 0;
+                    bottom: -6px;
+                    left: 0;
+                    display: block;
+                    margin: 0 auto;
+                    width: 0;
+                    height: 0;
+                    border-top: 4px solid $theme-color--default;
+                    border-right: 4px solid transparent;
+                    border-left: 4px solid transparent;
+                    content: "";
+                    border-top-color: $theme-color--default;
+                }
+            }
+        }
+        &:hover{
+            span{
+                &.filter-counter{
+                    visibility: visible;
+                    opacity: 1;
+                    -webkit-transform: translate(-50%,-100%);
+                    -ms-transform: translate(-50%,-100%);
+                    transform: translate(-50%,-100%);
+                }
+                &.filter-text{
+                    color: $theme-color--default;
+                }
+            }
+        }
+        &.is-checked{
+            span{
+                border-bottom: 2px solid $theme-color--default;
+                &.filter-text{
+                    color: $theme-color--default;
+                }
+            }
+        }
+    }
+
+}

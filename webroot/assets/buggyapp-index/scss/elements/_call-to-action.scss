@@ -1,0 +1,56 @@
+/*=============================================
+=           10. Call To Action Css             =
+=============================================*/
+
+.cta-bg-image_one {
+    background-color: #454545;
+    background-image: url(../images/patterns/mitech-call-to-action-image-global.png);
+    background-repeat: no-repeat;
+    background-position: top 35% right -68px;
+}
+.cta-bg-image_two {
+    background-color: #f6f2ed;
+    background-image: url(../images/patterns/mitech-home-appointment-call-to-action-bg-image.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.cta-content {
+    @media #{$tablet-device , $large-mobile}{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.cta-button-group {
+    &--one{
+        & .btn-one {
+            color: $theme-color--default;
+            margin: 10px;
+            &:hover {
+                background: $theme-color--default;
+                color: $white;
+            }
+        }
+        & .btn-two {
+            margin: 10px;
+            &:hover {
+                background: $theme-color--default;
+                color: $white;
+            }
+        }
+    }
+    &--two{
+        & .btn-one {
+            background: $theme-color--default;
+            color: $white;
+            margin: 10px;
+        }
+        & .btn-two {
+            margin: 10px;
+        }
+    }
+}
+
+
+/*=====  End of cta   ======*/

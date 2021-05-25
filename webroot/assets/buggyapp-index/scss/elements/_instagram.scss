@@ -1,0 +1,80 @@
+/*=============================================
+=        19. Instagram Css            =
+=============================================*/
+.instagram-feed-thumb {
+    overflow: hidden;
+}
+.instagram-wrap {
+    display: grid;
+    grid-template-columns: repeat( 6,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    @media #{$desktop-device}{
+        grid-template-columns: repeat( 4,1fr);
+    }
+    @media #{$tablet-device}{
+        grid-template-columns: repeat( 3,1fr);
+    }
+    @media #{$large-mobile}{
+        grid-template-columns: repeat( 2,1fr);
+    }
+    @media #{$small-mobile}{
+        grid-template-columns: repeat( 1,1fr);
+    }
+}
+.instagram-item {
+    & a {
+        overflow: hidden;
+        position: relative;
+        &::after {
+            background-color: rgba(0, 0, 0, 0.4);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+        }
+        
+        & img {
+            transition: all 1.5s ease-in-out;
+            transform: scale(1.0);
+            max-width: 100%;
+        }
+        &:hover img {
+            transform: scale(1.2);
+        }
+        
+        & .instagram-hvr-content {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+            & .tottallikes, & .totalcomments  {
+                color: $white;
+                margin: 0 5px;
+                & i {
+                    margin-right: 5px;
+                }
+            }
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+            & .instagram-hvr-content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

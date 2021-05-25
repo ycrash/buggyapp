@@ -1,0 +1,137 @@
+/*=============================================
+=            16. Brand Logo Css             =
+=============================================*/
+
+.brand-logo-slider__one{
+    .brand-logo-slider{
+        &__container{
+            padding: 15px 0;
+        }
+    }
+
+    .brand-logo{
+        align-self: center;
+        text-align: center;
+        position: relative;
+        &__image{
+            transition: all .4s linear;
+        }
+
+        &__image-hover{
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(.8,.8);
+            transition: all .4s linear;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        &:hover{
+            .brand-logo__image{
+                visibility: hidden;
+                opacity: 0;
+                transform: scale(.8,.8);
+
+            }
+            .brand-logo__image-hover{
+                opacity: 1;
+                visibility: visible;
+                transform: none !important;
+            }
+        }
+
+        /*&--slider{
+            margin-bottom: 0;
+        }*/
+    }
+}
+.brand-logo-slider__two{
+
+
+    .brand-logo-two{
+        align-self: center;
+        text-align: center;
+        position: relative;
+        &__image{
+            transition: all .4s linear;
+        }
+
+        &__image-hover{
+            visibility: hidden;
+            opacity: 0;
+            transform: translate(-50%, 20px);
+            transition: all .4s linear;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+        }
+
+        &:hover{
+            .brand-logo-two__image{
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            .brand-logo-two__image-hover{
+
+                visibility: visible;
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &--slider{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+.brand-logo-slider__three {
+    .brand-logo {
+        align-self: center;
+        text-align: center;
+        position: relative;
+        &__image{
+            opacity: 0.4;
+            transition: all .4s linear;
+        }
+        &:hover{
+            .brand-logo__image{
+                opacity: 1;
+            }
+            
+        }
+
+        &--slider{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.brand-logo-slider__four {
+    .brand-logo {
+        align-self: center;
+        text-align: center;
+        position: relative;
+        &__image{
+            opacity: 1;
+            transition: all .4s linear;
+        }
+        &:hover{
+            .brand-logo__image{
+               opacity: 0.4;
+            }
+            
+        }
+
+        &--slider{
+            margin-bottom: 0;
+        }
+    }
+}
+
+

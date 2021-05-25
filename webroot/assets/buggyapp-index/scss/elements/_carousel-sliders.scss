@@ -1,0 +1,9 @@
+.carousel-slider {
+    &__content {
+        margin-top: 25px;
+        padding: 0 20px;
+        & .headeing {
+            margin-bottom: 10px;
+        }
+    }
+}

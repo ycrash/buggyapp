@@ -1,0 +1,225 @@
+/*=============================================
+=            09. Accordions Css           =
+=============================================*/
+.faq-wrapper {
+    .panel.panel-default {
+        border: 1px solid #ebebeb;
+        margin-bottom: 20px;
+    }
+    
+    .card, .card-header{
+        border-radius: 0;
+        
+    }
+
+    .card{
+        border-bottom: none;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: 0 18px 40px rgba(51,51,51,.1);
+        &:last-child{
+            margin-bottom: 0; 
+        }
+    }
+    .card-header{
+        padding: 0;
+        border-bottom: 0;
+        background-color: $white;
+
+        h5{
+            button{
+                border: none;
+                width: 100%;
+                text-align: left;
+                color: $black;
+                padding: 20px 30px;
+                position: relative;
+                overflow-wrap: break-word;
+                white-space: normal;
+                font-size: 18px;
+                line-height: 1.2;
+                font-weight: 500;
+                border-radius: 5px;
+                background: $white;
+
+                @media #{$extra-small-mobile}{
+                    padding-left: 15px;
+                    padding-right: 20px;
+                }
+
+                span{
+                    position: absolute;
+                    right: 35px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    @media #{$extra-small-mobile}{
+                        right: 15px;
+                    }
+                    i{
+                        font-size: 14px;
+                        visibility: hidden;
+                        opacity: 0;
+                        display: none;
+                    }
+                }
+                &:hover, &:focus{
+                    text-decoration: none;
+                    color: $black;
+                }
+
+                &[aria-expanded="true"]{
+                    color: $white;
+                    background: $theme-color--two;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; 
+                    span{
+                        i{
+                            &:nth-child(2){
+                                visibility: visible;
+                                opacity: 1;
+                                display: inline;
+                            }
+                        }
+                    }
+                    &:before{
+                        height: 100%;
+                    }
+                }
+
+                &[aria-expanded="false"]{
+                    span{
+                        i{
+                            &:nth-child(1){
+                                visibility: visible;
+                                opacity: 1;
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-body{
+        padding: 23px 30px 29px;
+       
+    }
+}
+
+
+.faq-two-wrapper {
+    .panel.panel-default {
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 20px;
+    }
+    
+    .card, .card-header{
+        border-radius: 0;
+        
+    }
+
+    .card{
+        border-bottom: none;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #ebebeb;
+        &:last-child{
+            margin-bottom: 0; 
+        }
+    }
+    .card-header{
+        padding: 0;
+        border-bottom: 0;
+        background-color: $white;
+
+        h5{
+            button{
+                font-size: 24px;
+                border: none;
+                width: 100%;
+                text-align: left;
+                color: #ababab;
+                padding: 20px 35px;
+                position: relative;
+                overflow-wrap: break-word;
+                white-space: normal;
+                line-height: 1.2;
+                font-weight: 700;
+                border-radius: 5px;
+                background: $white;
+
+                @media #{$extra-small-mobile}{
+                    padding-left: 25px;
+                    padding-right: 10px;
+                }
+
+                span{
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    @media #{$extra-small-mobile}{
+                        right: 15px;
+                    }
+                    i {
+                        font-size: 24px;
+                        visibility: hidden;
+                        opacity: 0;
+                        display: none;
+                    }
+                }
+                &:hover, &:focus{
+                    text-decoration: none;
+                    color: $theme-color--default;
+                }
+
+                &[aria-expanded="true"]{
+                    color: $theme-color--default;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; 
+                    span{
+                        i{
+                            color: $theme-color--two;
+                            &:nth-child(2){
+                                visibility: visible;
+                                opacity: 1;
+                                display: inline;
+                            }
+                        }
+                    }
+                    &:before{
+                        height: 100%;
+                    }
+                }
+
+                &[aria-expanded="false"]{
+                    span{
+                        i{
+                            &:nth-child(1){
+                                visibility: visible;
+                                opacity: 1;
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-body{
+        padding: 0px 30px 29px;
+       
+    }
+}
+
+.faq-custom-col {
+    max-width: 570px;
+    float: right;
+    width: 100%;
+    @media #{$large-mobile , $tablet-device}{
+        float: inherit;
+        margin: 0 auto 30px;
+    }
+}

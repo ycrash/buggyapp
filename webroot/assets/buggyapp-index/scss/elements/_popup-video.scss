@@ -1,0 +1,191 @@
+/*========================================
+=        21. Video Popup Css            =
+==========================================*/
+.single-popup-wrap {
+    position: relative;
+}
+.video-link {
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: block;
+    & .ht-popup-video {
+        &.video-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background-color: rgba(8,106,216,0.8);
+        }
+        &.video-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            
+            & .video-mark {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%, -50%);
+                pointer-events: none;
+                & .wave-pulse {
+                    width: 1px;
+                    height: 0;
+                    margin: 0 auto;
+                   
+                    &::after , &::before {
+                        opacity: 0;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 200px;
+                        height: 200px;
+                        top: 50%;
+                        left: 50%;
+                        border-radius: 50%;
+                        border: 3px solid $theme-color--default;;
+                        animation: zoomBig 3.25s linear infinite;
+                            animation-delay: 0s;
+                    }
+                    &::before {
+                        animation-delay: .75s;
+                    }
+                }
+            }
+        }
+        
+        & .video-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            &__one{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                & .video-play {
+                    width: 72px;
+                    height: 72px;
+                    background: transparent;
+                    border: 6px solid #fff;
+                    border-radius: 50%;
+                    transition: all 1s cubic-bezier(0, 0, 0.2, 1) !important;
+                }
+                & .video-play-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    line-height: 1;
+                    margin-left: 1px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        transform: translate(-50%, -50%);
+                        border-top: 11px solid transparent;
+                        border-bottom: 11px solid transparent;
+                        border-left: 17px solid #fff;
+                    }
+                }
+            }
+            &__two {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                & .video-play {
+                    width: 78px;
+                    height: 78px;
+                    background: $theme-color--default;
+                    box-shadow: 0 2px 41px 0 rgba(91, 99, 254, 0.36);
+                    border-radius: 50%;
+                    transition: all 1s cubic-bezier(0, 0, 0.2, 1) !important;
+                    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
+                }
+                & .video-play-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    line-height: 1;
+                    margin-left: 1px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        transform: translate(-50%, -50%);
+                        border-top: 11px solid transparent;
+                        border-bottom: 11px solid transparent;
+                        border-left: 17px solid #fff;
+                        border-top-width: 12px;
+                        border-bottom-width: 12px;
+                        border-left-width: 19px;
+                        border-left-color: $white;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    &:hover {
+        & .video-play {
+            transform: scale3d(1.15, 1.15, 1.15);
+        }
+    }
+}
+
+@keyframes zoomBig {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: .5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+
+@keyframes zoomBig {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+    border-width: 3px;
+  }
+  40% {
+    opacity: .5;
+    border-width: 2px;
+  }
+  65% {
+    border-width: 1px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}

@@ -1,0 +1,152 @@
+/*=============================================
+=          24. Circle Progress Css            =
+=============================================*/
+
+.circle-progress-wrapper{
+    position: relative;
+}
+
+.feature-list-progress {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    
+    @media #{$small-mobile, $tablet-device} {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.feature-list-progress__info {
+    margin-left: 40px;
+    flex-basis: calc(100% - 170px);
+     @media #{$small-mobile, $tablet-device} {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+.feature-list-progress__counter {
+    flex-basis: 170px;
+}
+
+.feature-list-progress__list li {
+    margin-bottom: 10px;
+}
+
+.chart-progress{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &.cart-pogress-small {
+        width: 140px;
+        height: 140px;
+    }
+  
+    &__inner-wrapper{
+        width: 100%;
+        height: 100%;
+        padding: 13px;
+        position: relative;
+    }
+
+    &__inner{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $theme-color--default;
+
+        &--gradient{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #f76b1c;
+            background-image: linear-gradient(-224deg, #fad961 0, #f76b1c 100%);
+        }
+        &--bg-blue{
+            background: #5945e6;
+        }
+        &--theme-two{
+            background: $theme-color--two;
+        }
+        &--white {
+            background: transparent;
+        } 
+    }
+
+    &__inner-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__inner-text{
+        color: $white;
+        &.text-black {
+            color: $black;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        &.chart-icon {
+           font-size: 34px; 
+        }
+    }
+
+}
+.circle-design{
+    position: absolute;
+    border-radius: 50%;
+    animation: jump infinite 2s;
+    animation-direction: alternate;
+    background-color: #f76b1c;
+    background: $theme-color--default;
+    &.one {
+        width: 43px;
+        height: 43px;
+        left: 0;
+        bottom: 28px;
+    }
+
+    &.two {
+        width: 17px;
+        height: 17px;
+        right: -20px;
+        top: 50%;
+        margin-top: -8px;
+        animation-delay: 1s;
+    }
+
+    &--theme-two{
+        background: $theme-color--two;
+    }
+
+    &--gradient{
+        background-color: #f76b1c;
+        background-image: linear-gradient(-224deg, #fad961 0, #f76b1c 100%);
+    }
+    &--bg-green {
+        background: #38cb89;
+        box-shadow: 0 2px 17px rgba(89,69,230,0.27);
+    }
+}
+
+@keyframes jump{
+    0% {
+        transform: translateY(-10px) scale(0.9, 0.9);
+    }
+    100% {
+        transform: translateY(10px) scale(1, 1);
+    }
+}
+.feature-list-progress {
+    z-index: 3;
+    position: relative;
+}
+/*=====  End of circle progress  ======*/
+
