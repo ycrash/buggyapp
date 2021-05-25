@@ -37,6 +37,11 @@ ant dist-ee
 
 After executing ```ant dist-ee``` command, you will see ```dist``` directory in buggyapp project. The built code will be present inside ```dist/enterpise``` directory in zip format. The zip file contains JAR as well as WAR files.
 
+If you only want to build a JAR file then run the below command
+
+```
+ant dist-cmd
+```
 
 ## How to run buggyApp locally?
 
