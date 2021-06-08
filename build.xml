@@ -15,12 +15,12 @@
 
 	<path id="compile.classpath">
 		<pathelement location="${lib}/"/>
-		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar; ${lib}\gson-2.3.1.jar;${lib}\buggyApp.jar;"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar; ${lib}\gson-2.3.1.jar;"/>
 	</path>
 
 	<path id="test.classpath">
 		<pathelement location="${lib}/"/>
-		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar;${lib}\buggyApp.jar;"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar;"/>
 		<pathelement path="${lib}\testng-6.8.jar" />
 		<!-- <pathelement path="${test-lib}\mockito-all-1.10.19.jar" />-->
 	</path>
@@ -91,6 +91,9 @@
 		<copy todir="${bin}">
 			<fileset dir="${resources}" />
 		</copy>
+		
+		<copy file="webroot/pe-index.jsp" tofile="webroot/index.jsp" overwrite="true"/>
+		
 		<delete file="${dist}/buggyapp.war" />
 		<jar jarfile="${dist}/buggyapp.war" >
 
@@ -102,22 +105,6 @@
         description="generate the distribution" >
 		<!-- Create the distribution directory -->
 
-		<copy todir="${bin}">
-			<fileset dir="${resources}" />
-		</copy>
-
-		<delete file="${dist}/buggyapp.war" />
-		<jar jarfile="${dist}/buggyapp.war" >
-
-			<fileset dir="webroot"/>
-		</jar>
-	</target>
-	
-	<target name="dist-prod" depends="clean, compile"
-        description="generate the distribution" >
-		<!-- Create the distribution directory -->
-
-		<mkdir dir="${dist}/lib"/>
 		<copy todir="${bin}">
 			<fileset dir="${resources}" />
 		</copy>
@@ -152,18 +139,8 @@
 			</jar>
 		</target>
 	
-		<target name="dist-src" description="generate the source code distribution">
-					
-			<delete file="${dist}/buggyApp-src.zip" />
-
-			<jar jarfile="${dist}/buggyApp-src.zip" >
-
-				<fileset dir="${src}"/>
-			</jar>
-		</target>
-	
 	<target name="dist-ee" 
-		  		  depends="clean, compile"
+		  		  depends="clean, compile, compile-cmd"
 		          description="generate the buggyapp distribution" >
 			
 			<!-- Create the distribution directory -->
@@ -180,6 +157,7 @@
 			<delete file="${bin}/license.lic"/>
 			<delete file="${bin}/context.xml"/>
 			<delete file="${bin}/saml.xml"/>
+			<delete file="${dist}/buggyApp.jar"/>
 			
 			<property name="enterprise.version" value="0_5"/>
 			<copy todir="${dist}/enterprise/">
@@ -201,9 +179,21 @@
 				<fileset dir="webroot" excludes="WEB-INF/lib/**, **/testng-*.jar" />
 			</jar>
 		
+			<!-- build buggyapp.jar file -->
+			<delete file="${dist}/enterprise/buggyApp.jar" />
+			<jar jarfile="${dist}/enterprise/buggyApp.jar" >
+				<fileset dir="${dist}"/>
+				<manifest>
+				<attribute name="Main-Class"
+					value="com.buggyapp.LaunchPad"/>
+				</manifest>
+			</jar>
+		
+			<delete dir="${dist}/com" />
+		
 			<!-- build the server -->
 			<copy todir="${dist}/enterprise/">
-				<fileset dir="embedded-runner" includes="**/launch*, **/webapp-runner-8*, **/buggyApp.jar*, **/README.txt"/>
+				<fileset dir="embedded-runner" includes="**/launch*, **/webapp-runner-8*, **/README.txt"/>
 			</copy>
 	
 			<!-- Create Lib directory -->
