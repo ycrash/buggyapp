@@ -4,8 +4,12 @@ import com.buggyapp.blockedapp.AppObject;
 import com.buggyapp.blockedapp.BlockedAppDemo;
 import com.buggyapp.cpuspike.CPUSpikeDemo;
 import com.buggyapp.cpuspike.CPUSpikerThread;
+import com.buggyapp.dbconnectionleak.DBConnectionLeak;
+import com.buggyapp.dbconnectionleak.DBLeakDemo;
 import com.buggyapp.deadlock.DeadLockDemo;
 import com.buggyapp.exceptions.ExceptionsDemo;
+import com.buggyapp.fileconnectionleak.FileConnectionLeak;
+import com.buggyapp.fileconnectionleak.FileLeakDemo;
 import com.buggyapp.io.IODemo;
 import com.buggyapp.io.IOThread;
 import com.buggyapp.memoryleak.MapManager;
@@ -127,7 +131,21 @@ public class LaunchPad {
 			case "PROBLEM_EXCEPTIONS":
 				ExceptionsDemo eDemo = new ExceptionsDemo();
 				eDemo.start();
-				break;				
+				break;
+			case "bug10":
+			case "FILE_CONNECTIONS_LEAK":
+				FileLeakDemo.start();
+				break;
+				
+			case "bug11":
+			case "DB_CONNECTIONS_LEAK":
+				if (args == null || args.length < 4) {
+					System.out.println(" Usage: java -jar buggyApp.jar bug9 jdbc_url db_username db_password table_name");
+					System.out.println(" \n Example: java -jar buggyApp.jar bug9 jdbc:mysql://dbhost:port/dbname root temppassword blog");
+					return;
+				}
+				DBLeakDemo.start(args[1],args[2],args[3],args[4]);
+				break;
 				
 			default: 
 				printUsage(args);
@@ -254,7 +272,16 @@ public class LaunchPad {
 			case "PROBLEM_EXCEPTIONS":
 				ExceptionsDemo eDemo = new ExceptionsDemo();
 				eDemo.start();
-				break;				
+				break;	
+			case "bug10":
+			case "FILE_CONNECTIONS_LEAK":
+				FileLeakDemo.stop();
+				break;
+				
+			case "bug11":
+			case "DB_CONNECTIONS_LEAK":
+				DBLeakDemo.stop();
+				break;
 				
 			}
 		} catch (Throwable t) {

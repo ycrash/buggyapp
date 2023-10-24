@@ -11,6 +11,7 @@
 	<property name="lib" location="webroot/WEB-INF/lib"/>
 	<property name="test-lib" location="test-lib"/>
 	<property name="resources" location="resources"/>
+	<property name="runtime.library" location="lib/mysql-connector-java-5.1.46.jar" />
 	<property name="dist"  location="dist"/>
 
 	<path id="compile.classpath">
@@ -135,6 +136,7 @@
 			    <manifest>
 			      <attribute name="Main-Class"
 			                 value="com.buggyapp.LaunchPad"/>
+			       <attribute name="Class-Path" value="${runtime.library}" />
 			    </manifest>			
 			</jar>
 		</target>
