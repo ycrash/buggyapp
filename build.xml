@@ -21,7 +21,7 @@
 
 	<path id="test.classpath">
 		<pathelement location="${lib}/"/>
-		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar;"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar; ${lib}\mysql-connector-java-5.1.46.jar"/>
 		<pathelement path="${lib}\testng-6.8.jar" />
 		<!-- <pathelement path="${test-lib}\mockito-all-1.10.19.jar" />-->
 	</path>
@@ -147,6 +147,9 @@
 			
 			<!-- Create the distribution directory -->
 			<mkdir dir="${dist}/lib"/>
+			<copy todir="${dist}/lib">
+				<fileset dir="${lib}" />
+			</copy>
 	
 			<copy todir="${bin}">
 				<fileset dir="${resources}" />
@@ -180,6 +183,13 @@
 			<jar jarfile="${dist}/enterprise/buggyapp.war">
 				<fileset dir="webroot" excludes="WEB-INF/lib/**, **/testng-*.jar" />
 			</jar>
+
+			<manifestclasspath property="jar.classpath" jarfile="${dist.jar}">
+				<classpath>
+					<fileset dir="lib" includes="*.jar"/>
+				</classpath>
+			</manifestclasspath>
+
 		
 			<!-- build buggyapp.jar file -->
 			<delete file="${dist}/enterprise/buggyApp.jar" />
@@ -188,7 +198,7 @@
 				<manifest>
 				<attribute name="Main-Class"
 					value="com.buggyapp.LaunchPad"/>
-                                <attribute name="Class-Path" value="${runtime.library}" />
+				<attribute name="Class-Path" value="${jar.classpath}"/>
 				</manifest>
 			</jar>
 		
