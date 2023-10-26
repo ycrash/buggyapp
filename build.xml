@@ -188,6 +188,7 @@
 				<manifest>
 				<attribute name="Main-Class"
 					value="com.buggyapp.LaunchPad"/>
+                                <attribute name="Class-Path" value="${runtime.library}" />
 				</manifest>
 			</jar>
 		
