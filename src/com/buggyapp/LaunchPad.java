@@ -7,6 +7,7 @@ import com.buggyapp.cpuspike.CPUSpikerThread;
 import com.buggyapp.dbconnectionleak.DBConnectionLeak;
 import com.buggyapp.dbconnectionleak.DBLeakDemo;
 import com.buggyapp.deadlock.DeadLockDemo;
+import com.buggyapp.diskspace.DiskSpaceDemo;
 import com.buggyapp.exceptions.ExceptionsDemo;
 import com.buggyapp.fileconnectionleak.FileConnectionLeak;
 import com.buggyapp.fileconnectionleak.FileLeakDemo;
@@ -140,13 +141,21 @@ public class LaunchPad {
 			case "bug11":
 			case "DB_CONNECTIONS_LEAK":
 				if (args == null || args.length < 4) {
-					System.out.println(" Usage: java -jar buggyApp.jar bug9 jdbc_url db_username db_password table_name");
+					System.out.println(" Usage: java -jar buggyApp.jar bug11 jdbc_url db_username db_password table_name");
 					System.out.println(" \n Example: java -jar buggyApp.jar bug9 jdbc:mysql://dbhost:port/dbname root temppassword blog");
 					return;
 				}
 				DBLeakDemo.start(args[1],args[2],args[3],args[4]);
 				break;
-				
+			case "bug12":
+			case "FILL_DISK_SPACE":
+				if (args == null || args.length < 2) {
+					System.out.println(" Usage: java -jar buggyApp.jar bug12 drive_path percentage_fill");
+					System.out.println(" \n Example: java -jar buggyApp.jar bug12 /Volumes/tier1TestVolume 90");
+					return;
+				}
+				DiskSpaceDemo.fillSpace(args[1],Integer.valueOf(args[2]));
+				break;	
 			default: 
 				printUsage(args);
 			}
