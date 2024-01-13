@@ -4,12 +4,10 @@ import com.buggyapp.blockedapp.AppObject;
 import com.buggyapp.blockedapp.BlockedAppDemo;
 import com.buggyapp.cpuspike.CPUSpikeDemo;
 import com.buggyapp.cpuspike.CPUSpikerThread;
-import com.buggyapp.dbconnectionleak.DBConnectionLeak;
 import com.buggyapp.dbconnectionleak.DBLeakDemo;
 import com.buggyapp.deadlock.DeadLockDemo;
 import com.buggyapp.diskspace.DiskSpaceDemo;
 import com.buggyapp.exceptions.ExceptionsDemo;
-import com.buggyapp.fileconnectionleak.FileConnectionLeak;
 import com.buggyapp.fileconnectionleak.FileLeakDemo;
 import com.buggyapp.io.IODemo;
 import com.buggyapp.io.IOThread;
@@ -17,6 +15,7 @@ import com.buggyapp.memoryleak.MapManager;
 import com.buggyapp.memoryleak.MemoryLeakDemo;
 import com.buggyapp.memoryleaknooom.MemoryLeakNoOOMDemo;
 import com.buggyapp.memoryleakthread.ThreadMemoryLeakDemo;
+import com.buggyapp.networklag.NetworkLagService;
 import com.buggyapp.sampleapp.SampleAppDemo;
 import com.buggyapp.slowfinalize.SlowFinalizeDemo;
 import com.buggyapp.stackoverflow.StackOverflowDemo;
@@ -155,6 +154,15 @@ public class LaunchPad {
 					return;
 				}
 				DiskSpaceDemo.fillSpace(args[1],Integer.valueOf(args[2]));
+				break;	
+			case "bug14":
+			case "NETWORK_LAG_PROXY":
+				if (args == null || args.length < 2) {
+					System.out.println(" Usage: java -jar buggyApp.jar bug14 port delayInMilliseconds");
+					System.out.println(" \n Example: java -jar buggyApp.jar bug14 9999 1000");
+					return;
+				}
+				NetworkLagService.startNetworkLagProxy(Integer.valueOf(args[1]),Integer.valueOf(args[2]));
 				break;	
 			default: 
 				printUsage(args);

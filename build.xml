@@ -11,17 +11,16 @@
 	<property name="lib" location="webroot/WEB-INF/lib"/>
 	<property name="test-lib" location="test-lib"/>
 	<property name="resources" location="resources"/>
-	<property name="runtime.library" location="lib/mysql-connector-java-5.1.46.jar" />
 	<property name="dist"  location="dist"/>
 
 	<path id="compile.classpath">
 		<pathelement location="${lib}/"/>
-		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar; ${lib}\gson-2.3.1.jar;"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar; ${lib}\gson-2.3.1.jar;${lib}\mysql-connector-java-5.1.46.jar;${lib}\littleproxy-1.1.2.jar;${lib}\netty-all-4.0.44.Final.jar"/>
 	</path>
 
 	<path id="test.classpath">
 		<pathelement location="${lib}/"/>
-		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar; ${lib}\mysql-connector-java-5.1.46.jar"/>
+		<pathelement path="${lib}\servlet-api.jar;${lib}\log4j-core-2.6.2.jar;${lib}\log4j-api-2.6.2.jar;${lib}\commons-logging-1.1.1.jar; ${lib}\javassist.jar; ${lib}\gson-2.3.1.jar;${lib}\spring-mock.jar;${lib}\spring-core.jar; ${lib}\mysql-connector-java-5.1.46.jar;${lib}\netty-all-4.0.44.Final.jar"/>
 		<pathelement path="${lib}\testng-6.8.jar" />
 		<!-- <pathelement path="${test-lib}\mockito-all-1.10.19.jar" />-->
 	</path>
@@ -120,24 +119,30 @@
 	<target name="dist-cmd" depends="clean, compile-cmd"
 	        description="generate the prod distribution">
 			
-			<!-- Create the distribution directory 
-			<mkdir dir="${dist}/lib"/>
+		<mkdir dir="${dist}/lib"/>
+		<copy todir="${dist}/lib">
+			<fileset dir="${lib}" />
+		</copy>
 
-			<copy todir="${dist}/lib">
-				<fileset dir="${lib}" />
-			</copy>
-			-->	
+		<copy todir="${bin}">
+			<fileset dir="${resources}" />
+		</copy>
 			
 			<delete file="${dist}/buggyApp.jar" />
+		
+		<manifestclasspath property="jar.classpath" jarfile="${dist.jar}">
+			<classpath>
+				<fileset dir="lib" includes="*.jar"/>
+			</classpath>
+		</manifestclasspath>
 
 			<jar jarfile="${dist}/buggyApp.jar" >
-
 				<fileset dir="${dist}"/>
-			    <manifest>
-			      <attribute name="Main-Class"
-			                 value="com.buggyapp.LaunchPad"/>
-			       <attribute name="Class-Path" value="${runtime.library}" />
-			    </manifest>			
+				<manifest>
+				<attribute name="Main-Class"
+					value="com.buggyapp.LaunchPad"/>
+				<attribute name="Class-Path" value="${jar.classpath}"/>
+				</manifest>		
 			</jar>
 		</target>
 	
@@ -162,7 +167,6 @@
 			<delete file="${bin}/license.lic"/>
 			<delete file="${bin}/context.xml"/>
 			<delete file="${bin}/saml.xml"/>
-			<delete file="${dist}/buggyApp.jar"/>
 			
 			<property name="enterprise.version" value="0_5"/>
 			<copy todir="${dist}/enterprise/">
@@ -218,7 +222,7 @@
 			<zip destfile="${dist}/enterprise/buggyapp-${enterprise.version}.zip" basedir="${dist}/enterprise/"/>	
 			<delete dir="${dist}/enterprise/lib" />
 			<delete>
-			    <fileset dir="${dist}/enterprise/" excludes="**/buggyapp*.zip"/>
+			    <fileset dir="${dist}/enterprise/" excludes="**/buggy*.*"/>
 			</delete>
 		</target>
 </project>
