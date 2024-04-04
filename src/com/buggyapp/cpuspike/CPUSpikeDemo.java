@@ -1,5 +1,6 @@
 package com.buggyapp.cpuspike;
 
+import com.buggyapp.util.StringUtil;
 
 /**
  * 
@@ -7,15 +8,34 @@ package com.buggyapp.cpuspike;
  */
 public class CPUSpikeDemo {
 
-	public static void start() {
+	public static final String NUMBER_OF_CPU_CYCLES = "buggyApp.CPUCycles";
+	
+	public static void start() throws InterruptedException {
 		
-		new CPUSpikerThread().start();
-		new CPUSpikerThread().start();
-		new CPUSpikerThread().start();
-		new CPUSpikerThread().start();
-		new CPUSpikerThread().start();
-		new CPUSpikerThread().start();
-		System.out.println("6 threads launched!");
+		int noOfCycles = 6;
+		
+		if (StringUtil.isValid(System.getProperty(NUMBER_OF_CPU_CYCLES))) {
+			try {
+				noOfCycles = Integer.parseInt(System.getProperty(NUMBER_OF_CPU_CYCLES));
+			} catch (NumberFormatException e) {
+				System.out.println("Failed to parse buggyApp.CPUCycles");
+			}
+		}
+		
+		int counter = 0;
+		
+		while (counter < noOfCycles) {
+			
+			new CPUSpikerThread().start();
+			Thread.sleep((2 * 60 * 1000));
+			counter++;
+		}
+		/*
+		 * new CPUSpikerThread().start(); new CPUSpikerThread().start(); new
+		 * CPUSpikerThread().start(); new CPUSpikerThread().start(); new
+		 * CPUSpikerThread().start(); new CPUSpikerThread().start();
+		 */
+		System.out.println(noOfCycles + " threads launched!");
 	}
 	
 	public static void stop() {
