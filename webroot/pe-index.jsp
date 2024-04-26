@@ -858,6 +858,123 @@
                                     </div>
                                     <!-- ht-box-icon End -->
                                 </div>
+								
+								<div class="col-lg-3 col-md-6 wow move-up">
+                                    <!-- ht-box-icon Start -->
+                                    <div class="ht-box-images style-05">
+                                        <div class="image-box-wrap">
+                                            <div class="box-image">
+                                                <div class="default-image">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon9.png" alt="">
+                                                </div>
+                                                <div class="hover-images">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon9.1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="heading">DB Connection Leak</h5>
+                                                <div class="text">Simulate Database Connection leaks<br><br><br><br>
+                                                </div>
+                                                <div class="box-images-arrow">
+                                                    <a href="https://blog.ycrash.io/2023/11/09/chaos-engineering-db-connection-leak/" target="_blank">
+                                                        <span class="button-text">Read more</span>
+                                                        <i class="far fa-long-arrow-right"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ht-box-icon End -->
+                                </div>
+								
+								<div class="col-lg-3 col-md-6 wow move-up">
+                                    <!-- ht-box-icon Start -->
+                                    <div class="ht-box-images style-05">
+                                        <div class="image-box-wrap">
+                                            <div class="box-image">
+                                                <div class="default-image">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon10.png" alt="">
+                                                </div>
+                                                <div class="hover-images">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon10.1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="heading">File Connection Leak</h5>
+                                                <div class="text">Simulate File Connection leaks<br><br><br><br>
+                                                </div>
+                                                <div class="box-images-arrow">
+                                                    <a href="https://blog.ycrash.io/2023/11/09/chaos-engineering-file-connection-leak/" target="_blank">
+                                                        <span class="button-text">Read more</span>
+                                                        <i class="far fa-long-arrow-right"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ht-box-icon End -->
+                                </div>
+								
+								<div class="col-lg-3 col-md-6 wow move-up">
+                                    <!-- ht-box-icon Start -->
+                                    <div class="ht-box-images style-05">
+                                        <div class="image-box-wrap">
+                                            <div class="box-image">
+                                                <div class="default-image">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon11.png" alt="">
+                                                </div>
+                                                <div class="hover-images">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon11.1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="heading">Network Lag</h5>
+                                                <div class="text">Simulate Network Lag Or Delay<br><br><br><br>
+                                                </div>
+                                                <div class="box-images-arrow">
+                                                    <a href="https://blog.ycrash.io/chaos-engineering-network-lag/" target="_blank">
+                                                        <span class="button-text">Read more</span>
+                                                        <i class="far fa-long-arrow-right"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ht-box-icon End -->
+                                </div>
+								
+								<div class="col-lg-3 col-md-6 wow move-up">
+                                    <!-- ht-box-icon Start -->
+                                    <div class="ht-box-images style-05">
+                                        <div class="image-box-wrap">
+                                            <div class="box-image">
+                                                <div class="default-image">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon12.png" alt="">
+                                                </div>
+                                                <div class="hover-images">
+                                                    <img class="img-fulid" src="assets/buggyapp-index/images/buggyicon12.1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="heading">Storage Saturation</h5>
+                                                <div class="text">Simulate various performance problems<br><br><br><br>
+                                                </div>
+                                                <div class="box-images-arrow">
+                                                    <a href="https://blog.ycrash.io/diagnosing-storage-saturation/" target="_blank">
+                                                        <span class="button-text">Read more</span>
+                                                        <i class="far fa-long-arrow-right"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ht-box-icon End -->
+                                </div>
+								
                             </div>
                         </div>
 
