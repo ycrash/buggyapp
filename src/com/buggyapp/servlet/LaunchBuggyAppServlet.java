@@ -10,14 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.log4j.LogManager;
+//import org.apache.log4j.Logger;
 
 import com.buggyapp.LaunchPad;
 import com.buggyapp.cpuspike.CPUSpikerThread;
 import com.buggyapp.util.ExceptionUtil;
 import com.buggyapp.util.StringUtil;
 import com.google.gson.Gson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LaunchBuggyAppServlet extends HttpServlet {
 	

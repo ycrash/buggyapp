@@ -3,8 +3,6 @@ package com.buggyapp.sampleapp;
 import static com.buggyapp.sampleapp.SampleAppDemo.THRESHOLD;
 import static com.buggyapp.sampleapp.SampleAppDemo.s_map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.buggyapp.references.SimpleExample;
 

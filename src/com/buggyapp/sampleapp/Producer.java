@@ -2,8 +2,6 @@ package com.buggyapp.sampleapp;
 
 import static com.buggyapp.sampleapp.SampleAppDemo.*;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class Producer extends Thread {
 
