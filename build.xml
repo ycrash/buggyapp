@@ -210,7 +210,7 @@
 		
 			<!-- build the server -->
 			<copy todir="${dist}/enterprise/">
-				<fileset dir="embedded-runner" includes="**/launch*, **/webapp-runner-8*, **/README.txt"/>
+				<fileset dir="embedded-runner" includes="**/launch*, **/webapp-runner.jar, **/README.txt"/>
 			</copy>
 	
 			<!-- Create Lib directory -->
