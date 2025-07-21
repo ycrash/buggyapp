@@ -1,1 +1,1 @@
-java -Xmx2g -DlogDir=. -DuploadDir=. -jar webapp-runner-8.0.33.4.jar --port 9010 buggyapp.war &
+java -Xmx2g -DlogDir=. -DuploadDir=. -jar webapp-runner.jar --port 9010 buggyapp.war &
