@@ -2,6 +2,8 @@ package com.buggyapp;
 
 import com.buggyapp.blockedapp.AppObject;
 import com.buggyapp.blockedapp.BlockedAppDemo;
+import com.buggyapp.chattiness.ChattinessDemo;
+import com.buggyapp.chattiness.H2ChattinessDemo;
 import com.buggyapp.cpuspike.CPUSpikeDemo;
 import com.buggyapp.cpuspike.CPUSpikerThread;
 import com.buggyapp.dbconnectionleak.DBLeakDemo;
@@ -9,6 +11,10 @@ import com.buggyapp.deadlock.DeadLockDemo;
 import com.buggyapp.diskspace.DiskSpaceDemo;
 import com.buggyapp.exceptions.ExceptionsDemo;
 import com.buggyapp.fileconnectionleak.FileLeakDemo;
+import com.buggyapp.fileleak.FileChannelLeakSimulator;
+import com.buggyapp.fileleak.FileLeakSimulator;
+import com.buggyapp.gc.GcDemo;
+import com.buggyapp.httpconnectionleak.HttpConnectionLeakSimulator;
 import com.buggyapp.io.IODemo;
 import com.buggyapp.io.IOThread;
 import com.buggyapp.memoryleak.MapManager;
@@ -16,7 +22,9 @@ import com.buggyapp.memoryleak.MemoryLeakDemo;
 import com.buggyapp.memoryleaknooom.MemoryLeakNoOOMDemo;
 import com.buggyapp.memoryleakthread.ThreadMemoryLeakDemo;
 import com.buggyapp.networklag.NetworkLagService;
+import com.buggyapp.netwrorkslowness.SlowNetworkClientExample;
 import com.buggyapp.sampleapp.SampleAppDemo;
+import com.buggyapp.slowbackend.SlowBackendDemo;
 import com.buggyapp.slowfinalize.SlowFinalizeDemo;
 import com.buggyapp.stackoverflow.StackOverflowDemo;
 import com.buggyapp.threadleak.ForeverThread;
@@ -164,6 +172,46 @@ public class LaunchPad {
 				}
 				NetworkLagService.startNetworkLagProxy(Integer.valueOf(args[1]),Integer.valueOf(args[2]));
 				break;	
+		
+			case "bug15":
+			case "SLOW_BACKEND":
+				SlowBackendDemo slowBackendDemo = new SlowBackendDemo();
+				slowBackendDemo.start();
+				break;
+				
+			case "bug16":
+			case "CHATTINESS":
+				//ChattinessDemo.start();
+				H2ChattinessDemo.start();
+			    break;
+			    
+			case "bug17":
+			case "FILE_HANDLE_LEAK":
+				//FileLeakSimulator fileLeakSimulator = new FileLeakSimulator();
+				com.buggyapp.fileleak.FileLeakDemo.start();
+				break;
+				
+			case "bug18":
+			case "FILE_HANDLE_LEAK_CHANNEL":
+				FileChannelLeakSimulator fileChannelLeakSimulator = new FileChannelLeakSimulator();
+				fileChannelLeakSimulator.start();	
+				break;
+				
+			case "bug19":
+			case "HTTP_CONNECTION_LEAK":
+				HttpConnectionLeakSimulator.start1();
+				break;
+				
+			case "bug20":
+			case "NETWORK_SLOWNESS":
+				 SlowNetworkClientExample.start();
+				 break;
+				 
+			case "bug21":
+			case "GC_PAUSE":
+				 GcDemo.start();
+				 break;
+				 
 			default: 
 				printUsage(args);
 			}
@@ -290,6 +338,7 @@ public class LaunchPad {
 				ExceptionsDemo eDemo = new ExceptionsDemo();
 				eDemo.start();
 				break;	
+				
 			case "bug10":
 			case "FILE_CONNECTIONS_LEAK":
 				FileLeakDemo.stop();
@@ -300,6 +349,7 @@ public class LaunchPad {
 				DBLeakDemo.stop();
 				break;
 				
+				 
 			}
 		} catch (Throwable t) {
 			
